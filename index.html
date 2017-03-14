@@ -200,7 +200,12 @@
 <p>最后一步就是cd到yilia文件夹下更改配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure>
 <p>更改作者、友链等相关栏目，重新启动服务，就可以看到主题了。</p>
-<h2 id="编写博客"><a href="#编写博客" class="headerlink" title="编写博客"></a>编写博客</h2><p>博客的原理是将markdown文档放到<strong>source/_posts</strong>文件夹下，然后生成静态页面，先写到这里，未完待续。</p>
+<h2 id="编写博客"><a href="#编写博客" class="headerlink" title="编写博客"></a>编写博客</h2><p>博客的原理是将markdown文档放到<strong>source/_posts</strong>文件夹下，然后生成静态页面。</p>
+<p>首先新建一个文章</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;第一篇个人博客的诞生&quot;</div></pre></td></tr></table></figure>
+<p>在<strong>source/_posts</strong>中会生成一个md文件，用编辑器打开进行编辑，然后执行如下的操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>打开<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong>就能看到新写的博文啦～</p>
 
       
 
@@ -214,7 +219,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">博客 技术</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
         		</li>
       		
 		</ul>
@@ -331,7 +336,7 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">博客 技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
             
             <div class="clearfix"></div>
