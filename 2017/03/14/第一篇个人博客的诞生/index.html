@@ -20,7 +20,7 @@
 这篇博客使用了简洁轻便的Hexo平台和github的免费挂载，可能在未来某个打算花费大量精力打造博客的时刻购买一个个性化的域名。
 第一篇个人博客的诞生，是一个值得纪念的时间节点，代表我终于从长时间的焦虑中逐渐缓解，学会如何分享和思考。
 首先提到github，大三和大四实习期间使用github协作的">
-<meta property="og:updated_time" content="2017-03-14T15:49:02.000Z">
+<meta property="og:updated_time" content="2017-03-14T16:41:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一篇个人博客的诞生">
 <meta name="twitter:description" content="大学四年转瞬而过，始终都没有时间好好地写一篇博客，在回顾过去的历程之前，记录一下这篇博客诞生的始末。
@@ -179,40 +179,27 @@
 <p>第一篇个人博客的诞生，是一个值得纪念的时间节点，代表我终于从长时间的焦虑中逐渐缓解，学会如何分享和思考。</p>
 <p>首先提到github，大三和大四实习期间使用github协作的时候很多，但几乎全是未曾公开的实习代码，随着离职也都被移出了协作。这两年间也几乎没写过为了兴趣为了欣赏的作品，目的性很强，但技术却没得到长足的进步。</p>
 <p>想做很多当下比较流行的事，个人博客是其中一件。</p>
-<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p>装<strong>Nodejs</strong>是必要的，之前实习有用到，创建一个放置个人博客的文件夹，cd到文件夹下，使用如下命令安装<strong>Hexo</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure>
-<p>然后对Hexo进行初始化操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
-<p>生成静态页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
-<p>启动预览</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
+<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p>装<strong>Nodejs</strong>是必要的，之前实习有用到，创建一个放置个人博客的文件夹，cd到文件夹下，使用如下命令安装<strong>Hexo</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p>然后对Hexo进行初始化操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+<p>生成静态页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure></p>
+<p>启动预览<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure></p>
 <p>打开<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong>就看到了Hexo的欢迎页</p>
 <h2 id="关联Github"><a href="#关联Github" class="headerlink" title="关联Github"></a>关联Github</h2><p>之前发现github.io可以挂载自定义的html页面，也有过自己编写博客模版的打算，先作为一个小目标去努力。</p>
 <p>首先创建一个Repository，以我的个人博客为例，Repository的名字就是<strong>lolilukia.github.io</strong></p>
-<p>然后cd到个人博客的文件夹下，编辑<strong>_config.yml</strong>文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure>
-<p>按<strong>i</strong>进行插入修改操作，修改以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"></div><div class="line">     type: git</div><div class="line"></div><div class="line">     repo: https://github.com/lolilukia/lolilukia.github.io.git</div><div class="line"></div><div class="line">     branch: master</div></pre></td></tr></table></figure>
-<p>然后按<strong>esc</strong>退出编辑模式，连按两次大写<strong>Z</strong>保存并退出，退出后继续执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>部署</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>然后cd到个人博客的文件夹下，编辑<strong>_config.yml</strong>文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure></p>
+<p>按<strong>i</strong>进行插入修改操作，修改以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"></div><div class="line">     type: git</div><div class="line"></div><div class="line">     repo: https://github.com/lolilukia/lolilukia.github.io.git</div><div class="line"></div><div class="line">     branch: master</div></pre></td></tr></table></figure></p>
+<p>然后按<strong>esc</strong>退出编辑模式，连按两次大写<strong>Z</strong>保存并退出，退出后继续执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
 <p>打开<strong><a href="http://lolilukia.github.io" target="_blank" rel="external">http://lolilukia.github.io</a></strong>，就可以看到<strong>Hexo</strong>的欢迎页了</p>
 <h2 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h2><p>这个个人博客的主题来自<strong>Litten</strong>，说实话它的设计给了我会心一击，我在寒假的时候曾经想要写一个个人博客模板，虽说细节并不相同，但侧边栏的设计惊人地相似，不得不说这个主题很有科技感，敬佩和羡慕之情油然而生。</p>
-<p>首先将这个主题拷贝到本地，也就是个人博客目录下的主题文件夹中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/litten/hexo-theme-yilia.git /Users/apple/blog/themes/yilia</div></pre></td></tr></table></figure>
-<p>修改blog下的<strong>_config.yml</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure>
+<p>首先将这个主题拷贝到本地，也就是个人博客目录下的主题文件夹中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/litten/hexo-theme-yilia.git /Users/apple/blog/themes/yilia</div></pre></td></tr></table></figure></p>
+<p>修改blog下的<strong>_config.yml</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure></p>
 <p>将themes后的默认<strong>landscope</strong>改为<strong>yilia</strong></p>
-<p>最后一步就是cd到yilia文件夹下更改配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure>
+<p>最后一步就是cd到yilia文件夹下更改配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure></p>
 <p>更改作者、友链等相关栏目，重新启动服务，就可以看到主题了。</p>
 <h2 id="编写博客"><a href="#编写博客" class="headerlink" title="编写博客"></a>编写博客</h2><p>博客的原理是将markdown文档放到<strong>source/_posts</strong>文件夹下，然后生成静态页面。</p>
-<p>首先新建一个文章</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;第一篇个人博客的诞生&quot;</div></pre></td></tr></table></figure>
-<p>在<strong>source/_posts</strong>中会生成一个md文件，用编辑器打开进行编辑，然后执行如下的操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>首先新建一个文章<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;第一篇个人博客的诞生&quot;</div></pre></td></tr></table></figure></p>
+<p>在<strong>source/_posts</strong>中会生成一个md文件，用编辑器打开进行编辑，然后执行如下的操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
 <p>打开<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong>就能看到新写的博文啦～</p>
 
       
