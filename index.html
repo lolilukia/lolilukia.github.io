@@ -236,23 +236,13 @@
       
         <p>大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的<strong>Eclipse</strong>，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试<strong>MacOS</strong>的水。</p>
 <p>不得不说，<strong>MacOS</strong>是真方便啊。</p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p><strong>MacOS</strong>自带了<strong>python2.7</strong>，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用<a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime</a>即可，美观高亮</p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p><strong>MacOS</strong>自带了<strong>python2.7</strong>，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用<a href="http://www.sublimetext.com/">sublime</a>即可，美观高亮</p>
 <p><img src="https://cl.ly/103G3c3X383L/download/[644114119faae046396e6ca98c8ffafb]_Image%202017-03-15%20at%2010.33.32.png" alt="sublime"></p>
 <p>安装<strong>selenium</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo easy_install selenium</div></pre></td></tr></table></figure></p>
-<p>以Firefox为例，安装<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="external">geckodriver</a>驱动<br>下载解压之后，移动到/usr/local/bin中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mv ~/Downloads/geckodriver /usr/local/bin/</div></pre></td></tr></table></figure></p>
-<p>如果出现了以下的问题，就是没有安装<strong>geckodriver</strong></p>
-<blockquote>
-<p>selenium.common.exceptions.WebDriverException: Message: ‘geckodriver’ executable needs to be in PATH.</p>
-</blockquote>
-<h2 id="简单的自动化测试脚本"><a href="#简单的自动化测试脚本" class="headerlink" title="简单的自动化测试脚本"></a>简单的自动化测试脚本</h2><p>打开<strong>sublime</strong>，键入几句简单的测试代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">from selenium import webdriver</div><div class="line">from selenium.common.exceptions import NoSuchElementException</div><div class="line">from selenium.webdriver.common.keys import Keys</div><div class="line">import time</div><div class="line"></div><div class="line">browser = webdriver.Firefox() </div><div class="line">browser.get(&quot;http://www.baidu.com&quot;) </div><div class="line">assert &quot;Hahaha&quot; in browser.title</div><div class="line">browser.close()</div></pre></td></tr></table></figure></p>
-<p>保存成<strong>test.py</strong>，然后在命令行中运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python test.py</div></pre></td></tr></table></figure></p>
-<p>如果出现了如下的错误</p>
-<blockquote>
-<p>selenium.common.exceptions.WebDriverException: Message: Missing ‘marionetteProtocol’ field in handshake</p>
-</blockquote>
-<p>说明<strong>Firefox</strong>的版本太老了，更新之后再运行，发现百度的页面打开，这个简单脚本就运行成功了。</p>
-<p>有时间的时候再探究一下<strong>Chrome</strong>。</p>
-
+<p>以Firefox为例，安装<a href="https://github.com/mozilla/geckodriver/releases">geckodriver</a>驱动<br>下载解压之后，移动到/usr/local/bin中<br>
+        
+          <a class="article-more-a" href="/2017/03/15/MacOS-selenium-python极速搭建/#more">more >></a>
+        
       
 
       
@@ -318,29 +308,10 @@
 <p>第一篇个人博客的诞生，是一个值得纪念的时间节点，代表我终于从长时间的焦虑中逐渐缓解，学会如何分享和思考。</p>
 <p>首先提到github，大三和大四实习期间使用github协作的时候很多，但几乎全是未曾公开的实习代码，随着离职也都被移出了协作。这两年间也几乎没写过为了兴趣为了欣赏的作品，目的性很强，但技术却没得到长足的进步。</p>
 <p>想做很多当下比较流行的事，个人博客是其中一件。</p>
-<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p>装<strong>Nodejs</strong>是必要的，之前实习有用到，创建一个放置个人博客的文件夹，cd到文件夹下，使用如下命令安装<strong>Hexo</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure></p>
-<p>然后对Hexo进行初始化操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
-<p>生成静态页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure></p>
-<p>启动预览<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure></p>
-<p>打开<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong>就看到了Hexo的欢迎页</p>
-<h2 id="关联Github"><a href="#关联Github" class="headerlink" title="关联Github"></a>关联Github</h2><p>之前发现github.io可以挂载自定义的html页面，也有过自己编写博客模版的打算，先作为一个小目标去努力。</p>
-<p>首先创建一个Repository，以我的个人博客为例，Repository的名字就是<strong>lolilukia.github.io</strong></p>
-<p>然后cd到个人博客的文件夹下，编辑<strong>_config.yml</strong>文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure></p>
-<p>按<strong>i</strong>进行插入修改操作，修改以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"></div><div class="line">     type: git</div><div class="line"></div><div class="line">     repo: https://github.com/lolilukia/lolilukia.github.io.git</div><div class="line"></div><div class="line">     branch: master</div></pre></td></tr></table></figure></p>
-<p>然后按<strong>esc</strong>退出编辑模式，连按两次大写<strong>Z</strong>保存并退出，退出后继续执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
-<p>打开<strong><a href="http://lolilukia.github.io" target="_blank" rel="external">http://lolilukia.github.io</a></strong>，就可以看到<strong>Hexo</strong>的欢迎页了</p>
-<h2 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h2><p>这个个人博客的主题来自<strong>Litten</strong>，说实话它的设计给了我会心一击，我在寒假的时候曾经想要写一个个人博客模板，虽说细节并不相同，但侧边栏的设计惊人地相似，不得不说这个主题很有科技感，敬佩和羡慕之情油然而生。</p>
-<p>首先将这个主题拷贝到本地，也就是个人博客目录下的主题文件夹中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/litten/hexo-theme-yilia.git /Users/apple/blog/themes/yilia</div></pre></td></tr></table></figure></p>
-<p>修改blog下的<strong>_config.yml</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure></p>
-<p>将themes后的默认<strong>landscope</strong>改为<strong>yilia</strong></p>
-<p>最后一步就是cd到yilia文件夹下更改配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure></p>
-<p>更改作者、友链等相关栏目，重新启动服务，就可以看到主题了。</p>
-<h2 id="编写博客"><a href="#编写博客" class="headerlink" title="编写博客"></a>编写博客</h2><p>博客的原理是将markdown文档放到<strong>source/_posts</strong>文件夹下，然后生成静态页面。</p>
-<p>首先新建一个文章<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;第一篇个人博客的诞生&quot;</div></pre></td></tr></table></figure></p>
-<p>在<strong>source/_posts</strong>中会生成一个md文件，用编辑器打开进行编辑，然后执行如下的操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
-<p>打开<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong>就能看到新写的博文啦～</p>
-
+<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p>装<strong>Nodejs</strong>是必要的，之前实习有用到，创建一个放置个人博客的文件夹，cd到文件夹下，使用如下命令安装<strong>Hexo</strong><br>
+        
+          <a class="article-more-a" href="/2017/03/14/第一篇个人博客的诞生/#more">more >></a>
+        
       
 
       
