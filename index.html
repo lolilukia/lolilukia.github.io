@@ -168,9 +168,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>研究气象模式转眼已经有了一年多的时间，主攻的方向是CESM模式的性能优化，这套内容其实在2015年就已经发布在论坛上，现在仅作为一个搬运，充实个人博客的内容。</p>
-<h2 id="安装PGI"><a href="#安装PGI" class="headerlink" title="安装PGI"></a>安装PGI</h2><p>PGI是可以运行CESM所需的编译器的一种，还可以使用ifort，PGI新版无破解，需要购买，10.6版本有破解，但没有CUDA组件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir pgi</div><div class="line">cd 你解压PGI安装包的目录</div><div class="line">./install</div></pre></td></tr></table></figure></p>
-<p>这里我的安装目录是<strong>/opt/pgi</strong>，然后配置环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">vi ~/.bashrc</div><div class="line">export PGI=/opt/pgi/linux86-64/10.6/  </div><div class="line">export MANPATH=$MANPATH:$PGI/man  </div><div class="line">export LM_LICENSE_FILE=/opt/pgi/license.dat  </div><div class="line">export PATH=$PATH:$PGI/bin </div><div class="line">source ./bashrc</div></pre></td></tr></table></figure></p>
-<p>然后检测PGI是否安装成功，输入<strong>pgf90</strong>,如果出现<strong>$pgf90-Warning-No files to process</strong>即为成功<br>
+<h2 id="安装PGI"><a href="#安装PGI" class="headerlink" title="安装PGI"></a>安装PGI</h2><p>PGI是可以运行CESM所需的编译器的一种，还可以使用ifort，PGI新版无破解，需要购买，10.6版本有破解，但没有CUDA组件<br>
         
           <a class="article-more-a" href="/2017/03/16/CESM模式1-2-0环境搭建指南/#more">more >></a>
         
@@ -237,9 +235,7 @@
         <p>大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的<strong>Eclipse</strong>，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试<strong>MacOS</strong>的水。</p>
 <p>不得不说，<strong>MacOS</strong>是真方便啊。</p>
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p><strong>MacOS</strong>自带了<strong>python2.7</strong>，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用<a href="http://www.sublimetext.com/">sublime</a>即可，美观高亮</p>
-<p><img src="https://cl.ly/103G3c3X383L/download/[644114119faae046396e6ca98c8ffafb]_Image%202017-03-15%20at%2010.33.32.png" alt="sublime"></p>
-<p>安装<strong>selenium</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo easy_install selenium</div></pre></td></tr></table></figure></p>
-<p>以Firefox为例，安装<a href="https://github.com/mozilla/geckodriver/releases">geckodriver</a>驱动<br>下载解压之后，移动到/usr/local/bin中<br>
+<p><img src="https://cl.ly/103G3c3X383L/download/[644114119faae046396e6ca98c8ffafb]_Image%202017-03-15%20at%2010.33.32.png" alt="sublime"><br>
         
           <a class="article-more-a" href="/2017/03/15/MacOS-selenium-python极速搭建/#more">more >></a>
         
@@ -305,10 +301,7 @@
       
         <p>大学四年转瞬而过，始终都没有时间好好地写一篇博客，在回顾过去的历程之前，记录一下这篇博客诞生的始末。</p>
 <p>这篇博客使用了简洁轻便的Hexo平台和github的免费挂载，可能在未来某个打算花费大量精力打造博客的时刻购买一个个性化的域名。</p>
-<p>第一篇个人博客的诞生，是一个值得纪念的时间节点，代表我终于从长时间的焦虑中逐渐缓解，学会如何分享和思考。</p>
-<p>首先提到github，大三和大四实习期间使用github协作的时候很多，但几乎全是未曾公开的实习代码，随着离职也都被移出了协作。这两年间也几乎没写过为了兴趣为了欣赏的作品，目的性很强，但技术却没得到长足的进步。</p>
-<p>想做很多当下比较流行的事，个人博客是其中一件。</p>
-<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p>装<strong>Nodejs</strong>是必要的，之前实习有用到，创建一个放置个人博客的文件夹，cd到文件夹下，使用如下命令安装<strong>Hexo</strong><br>
+<p>第一篇个人博客的诞生，是一个值得纪念的时间节点，代表我终于从长时间的焦虑中逐渐缓解，学会如何分享和思考。<br>
         
           <a class="article-more-a" href="/2017/03/14/第一篇个人博客的诞生/#more">more >></a>
         
