@@ -6,32 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MacOS + selenium + python 极速搭建 | Lolilukia</title>
+  <title>CESM模式1.2.0环境搭建指南 | Lolilukia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的Eclipse，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试MacOS的水。
-不得不说，MacOS是真方便啊。
-环境搭建MacOS自带了python2.7，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用sublime即可，美观高亮
-
-安装">
+  <meta name="description" content="研究气象模式转眼已经有了一年多的时间，主攻的方向是CESM模式的性能优化，这套内容其实在2015年就已经发布在论坛上，现在仅作为一个搬运，充实个人博客的内容。
+安装PGIPGI是可以运行CESM所需的编译器的一种，还可以使用ifort，PGI新版无破解，需要购买，10.6版本有破解，但没有CUDA组件。123mkdir pgicd 你解压PGI安装包的目录./install
+这里我的安装目录是/o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MacOS + selenium + python 极速搭建">
-<meta property="og:url" content="http://yoursite.com/2017/03/15/MacOS-selenium-python极速搭建/index.html">
+<meta property="og:title" content="CESM模式1.2.0环境搭建指南">
+<meta property="og:url" content="http://yoursite.com/2017/03/16/CESM模式1-2-0环境搭建指南/index.html">
 <meta property="og:site_name" content="Lolilukia">
-<meta property="og:description" content="大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的Eclipse，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试MacOS的水。
-不得不说，MacOS是真方便啊。
-环境搭建MacOS自带了python2.7，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用sublime即可，美观高亮
-
-安装">
-<meta property="og:image" content="https://cl.ly/103G3c3X383L/download/[644114119faae046396e6ca98c8ffafb]_Image%202017-03-15%20at%2010.33.32.png">
-<meta property="og:updated_time" content="2017-03-15T16:17:13.000Z">
+<meta property="og:description" content="研究气象模式转眼已经有了一年多的时间，主攻的方向是CESM模式的性能优化，这套内容其实在2015年就已经发布在论坛上，现在仅作为一个搬运，充实个人博客的内容。
+安装PGIPGI是可以运行CESM所需的编译器的一种，还可以使用ifort，PGI新版无破解，需要购买，10.6版本有破解，但没有CUDA组件。123mkdir pgicd 你解压PGI安装包的目录./install
+这里我的安装目录是/o">
+<meta property="og:updated_time" content="2017-03-17T05:33:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MacOS + selenium + python 极速搭建">
-<meta name="twitter:description" content="大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的Eclipse，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试MacOS的水。
-不得不说，MacOS是真方便啊。
-环境搭建MacOS自带了python2.7，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用sublime即可，美观高亮
-
-安装">
-<meta name="twitter:image" content="https://cl.ly/103G3c3X383L/download/[644114119faae046396e6ca98c8ffafb]_Image%202017-03-15%20at%2010.33.32.png">
+<meta name="twitter:title" content="CESM模式1.2.0环境搭建指南">
+<meta name="twitter:description" content="研究气象模式转眼已经有了一年多的时间，主攻的方向是CESM模式的性能优化，这套内容其实在2015年就已经发布在论坛上，现在仅作为一个搬运，充实个人博客的内容。
+安装PGIPGI是可以运行CESM所需的编译器的一种，还可以使用ifort，PGI新版无破解，需要购买，10.6版本有破解，但没有CUDA组件。123mkdir pgicd 你解压PGI安装包的目录./install
+这里我的安装目录是/o">
   
     <link rel="alternative" href="/atom.xml" title="Lolilukia" type="application/atom+xml">
   
@@ -163,44 +155,54 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MacOS-selenium-python极速搭建" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CESM模式1-2-0环境搭建指南" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MacOS + selenium + python 极速搭建
+      CESM模式1.2.0环境搭建指南
     </h1>
   
 
         
-        <a href="/2017/03/15/MacOS-selenium-python极速搭建/" class="archive-article-date">
-  	<time datetime="2017-03-15T02:58:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
+        <a href="/2017/03/16/CESM模式1-2-0环境搭建指南/" class="archive-article-date">
+  	<time datetime="2017-03-16T15:28:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的<strong>Eclipse</strong>，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试<strong>MacOS</strong>的水。</p>
-<p>不得不说，<strong>MacOS</strong>是真方便啊。</p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p><strong>MacOS</strong>自带了<strong>python2.7</strong>，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用<a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime</a>即可，美观高亮</p>
-<p><img src="https://cl.ly/103G3c3X383L/download/[644114119faae046396e6ca98c8ffafb]_Image%202017-03-15%20at%2010.33.32.png" alt="sublime"></p>
-<p>安装<strong>selenium</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo easy_install selenium</div></pre></td></tr></table></figure></p>
-<p>以Firefox为例，安装<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="external">geckodriver</a>驱动<br>下载解压之后，移动到/usr/local/bin中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mv ~/Downloads/geckodriver /usr/local/bin/</div></pre></td></tr></table></figure></p>
-<p>如果出现了以下的问题，就是没有安装<strong>geckodriver</strong></p>
+        <p>研究气象模式转眼已经有了一年多的时间，主攻的方向是CESM模式的性能优化，这套内容其实在2015年就已经发布在论坛上，现在仅作为一个搬运，充实个人博客的内容。</p>
+<h2 id="安装PGI"><a href="#安装PGI" class="headerlink" title="安装PGI"></a>安装PGI</h2><p>PGI是可以运行CESM所需的编译器的一种，还可以使用ifort，PGI新版无破解，需要购买，10.6版本有破解，但没有CUDA组件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir pgi</div><div class="line">cd 你解压PGI安装包的目录</div><div class="line">./install</div></pre></td></tr></table></figure></p>
+<p>这里我的安装目录是<strong>/opt/pgi</strong>，然后配置环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">vi ~/.bashrc</div><div class="line">export PGI=/opt/pgi/linux86-64/10.6/  </div><div class="line">export MANPATH=$MANPATH:$PGI/man  </div><div class="line">export LM_LICENSE_FILE=/opt/pgi/license.dat  </div><div class="line">export PATH=$PATH:$PGI/bin </div><div class="line">source ./bashrc</div></pre></td></tr></table></figure></p>
+<p>然后检测PGI是否安装成功，输入<strong>pgf90</strong>,如果出现<strong>$pgf90-Warning-No files to process</strong>即为成功</p>
+<h2 id="安装zlib"><a href="#安装zlib" class="headerlink" title="安装zlib"></a>安装zlib</h2><p><a href="http://download.csdn.net/detail/u011510965/9335797" target="_blank" rel="external">下载传送门</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd 解压目录</div><div class="line">./configure --prefix=/home/ed/local</div><div class="line">make check install</div></pre></td></tr></table></figure></p>
+<p>如果出现了<strong>No shared library support</strong>的报错，说明需要指定编译器，可以替换成如下的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --prefix=/home/ed/local --sharedlibdir=/opt/pgi/linux86-64/15.10/lib</div></pre></td></tr></table></figure></p>
+<h2 id="安装hdf5"><a href="#安装hdf5" class="headerlink" title="安装hdf5"></a>安装hdf5</h2><p>[下载传送门]（<a href="http://download.csdn.net/detail/u011510965/9335833）" target="_blank" rel="external">http://download.csdn.net/detail/u011510965/9335833）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd 解压目录</div><div class="line">./configure --with-zlib=/home/ed/local --prefix=/home/ed/local</div><div class="line">make</div><div class="line">make check</div><div class="line">make install</div></pre></td></tr></table></figure></p>
+<h2 id="netcdf系列安装"><a href="#netcdf系列安装" class="headerlink" title="netcdf系列安装"></a>netcdf系列安装</h2><p>netcdf从4.2就开始分开了，netcdf-c和netcdf-fortran一定要装在一起，并且使用同一个编译器，不然就会出现很难解决的错误</p>
+<h3 id="netcdf"><a href="#netcdf" class="headerlink" title="netcdf"></a>netcdf</h3><p><a href="http://download.csdn.net/detail/u011510965/9335765" target="_blank" rel="external">下载传送门</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd 解压目录</div><div class="line">CPPFLAGS=-I/home/ed/local/include LDFLAGS=-L/home/ed/local/lib ./configure --prefix=/home/ed/local CC=pgcc FC=pgf90</div><div class="line">make</div><div class="line">make check</div><div class="line">make install</div></pre></td></tr></table></figure></p>
+<h3 id="netcdf-c"><a href="#netcdf-c" class="headerlink" title="netcdf-c"></a>netcdf-c</h3><p><a href="http://download.csdn.net/detail/u011510965/9336007" target="_blank" rel="external">下载传送门</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CPPFLAGS=-I/home/ed/local/include LDFLAGS=-L/home/ed/local/lib ./configure --prefix=/home/ed/local CC=pgcc FC=pgf90</div><div class="line">make</div><div class="line">make check</div><div class="line">make install</div></pre></td></tr></table></figure></p>
+<h3 id="netcdf-fortran"><a href="#netcdf-fortran" class="headerlink" title="netcdf-fortran"></a>netcdf-fortran</h3><p>先添加一个环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export LD_LIBRARY_PATH=/home/ed/local/lib:$&#123;LD_LIBRARY_PATH&#125;</div><div class="line">source ~/.bashrc生效</div></pre></td></tr></table></figure></p>
+<p>然后进行安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CPPFLAGS=-I/home/ed/local/include LDFLAGS=-L/home/ed/local/lib ./configure --prefix=/home/ed/local CC=pgcc FC=pgf90</div><div class="line">make</div><div class="line">make check</div><div class="line">make install</div></pre></td></tr></table></figure></p>
 <blockquote>
-<p>selenium.common.exceptions.WebDriverException: Message: ‘geckodriver’ executable needs to be in PATH.</p>
+<p>注意：重新make的话，要先运行make clean<br>配置netcdf的环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">vi ~/.bashrc</div><div class="line">export NETCDF=/home/ed/local</div><div class="line">export PATH=$PATH:$NETCDF/bin:$NETCDF/include:$NETCDF/lib</div><div class="line">export MANPATH=$MANPATH:$NETCDF/share/man</div><div class="line">source ~/.bashrc</div></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="简单的自动化测试脚本"><a href="#简单的自动化测试脚本" class="headerlink" title="简单的自动化测试脚本"></a>简单的自动化测试脚本</h2><p>打开<strong>sublime</strong>，键入几句简单的测试代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">from selenium import webdriver</div><div class="line">from selenium.common.exceptions import NoSuchElementException</div><div class="line">from selenium.webdriver.common.keys import Keys</div><div class="line">import time</div><div class="line"></div><div class="line">browser = webdriver.Firefox() </div><div class="line">browser.get(&quot;http://www.baidu.com&quot;) </div><div class="line">assert &quot;Hahaha&quot; in browser.title</div><div class="line">browser.close()</div></pre></td></tr></table></figure></p>
-<p>保存成<strong>test.py</strong>，然后在命令行中运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python test.py</div></pre></td></tr></table></figure></p>
-<p>如果出现了如下的错误</p>
+<p>检测netcdf是否安装成功：<strong>ncdump</strong></p>
+<h2 id="安装mpich"><a href="#安装mpich" class="headerlink" title="安装mpich"></a>安装mpich</h2><p>建议安装的版本是3.1.1</p>
+<h2 id="配置CESM"><a href="#配置CESM" class="headerlink" title="配置CESM"></a>配置CESM</h2><p>打开scripts/ccsm_utils/Machines,里面有个config_machines.xml打开在后面添加，按自己目录酌情修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;machine MACH=&quot;newmach&quot;&gt;                 //machine name自己取的，newmach</div><div class="line">        &lt;DESC&gt;os is Linux&lt;/DESC&gt;</div><div class="line">        &lt;OS&gt;LINUX&lt;/OS&gt;</div><div class="line">        &lt;COMPILERS&gt;pgi&lt;/COMPILERS&gt;</div><div class="line">        &lt;MPILIBS&gt;mpich&lt;/MPILIBS&gt;</div><div class="line">        &lt;RUNDIR&gt;/cesm/cesm1_2_0/$CASE/run&lt;/RUNDIR&gt;        //自己定的</div><div class="line">        &lt;EXEROOT&gt;/cesm/cesm1_2_0/$CASE/bld&lt;/EXEROOT&gt;</div><div class="line">        &lt;DIN_LOC_ROOT&gt;/cesm/cesm1_2_0/inputdata&lt;/DIN_LOC_ROOT&gt;       //文件夹事先要创建出来</div><div class="line">        &lt;DIN_LOC_ROOT_CLMFORC&gt;/cesm/cesm1_2_0/lmwg&lt;/DIN_LOC_ROOT_CLMFORC&gt;</div><div class="line">        &lt;DOUT_S_ROOT&gt;/cesm/cesm1_2_0/archive/$CASE&lt;/DOUT_S_ROOT&gt;</div><div class="line">        &lt;DOUT_L_MSROOT&gt;/cesm/cesm1_2_0/$CASE&lt;/DOUT_L_MSROOT&gt;              </div><div class="line">        &lt;CCSM_BASELINE&gt;/cesm/cesm1_2_0/ccsm_baselines&lt;/CCSM_BASELINE&gt;</div><div class="line">        &lt;CCSM_CPRNC&gt;/cesm/cesm1_2_0/tools/cprnc&lt;/CCSM_CPRNC&gt;</div><div class="line">        &lt;SUPPORTED_BY&gt;srinathv -at- ucar.edu&lt;/SUPPORTED_BY&gt;</div><div class="line">        &lt;GMAKE_J&gt;2&lt;/GMAKE_J&gt;            //建议填1或2</div><div class="line">        &lt;MAX_TASKS_PER_NODE&gt;8&lt;/MAX_TASKS_PER_NODE&gt;</div><div class="line">        &lt;PES_PER_NODE&gt;16&lt;/PES_PER_NODE&gt;</div><div class="line">&lt;/machine&gt;</div></pre></td></tr></table></figure></p>
+<p>然后打开config_compiler.xml打开在后面添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;compiler MACH=&quot;newmach&quot;&gt;</div><div class="line">   &lt;NETCDF_PATH&gt;/home/ed/local&lt;/NETCDF_PATH&gt;</div><div class="line">   &lt;ADD_SLIBS&gt;-L/home/ed/local/lib -lnetcdf -lnetcdff&lt;/ADD_SLIBS&gt;</div><div class="line">   &lt;MPI_PATH&gt;/home/ed/local/mpich&lt;/MPI_PATH&gt;</div><div class="line">&lt;/compiler&gt;</div></pre></td></tr></table></figure></p>
+<p>然后执行cp env_mach_specific.userdefined env_mach_specific.newmach,在后面添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">set NETCDF_PATH = /home/ed/local</div><div class="line">set MPI_PATH = /home/ed/local/mpich</div><div class="line">setenv INC_NETCDF $&#123;NETCDF_PATH&#125;/include</div><div class="line">setenv LIB_NETCDF $&#123;NETCDF_PATH&#125;/lib</div><div class="line">setenv INC_MPI $&#123;MPI_PATH&#125;/include</div><div class="line">setenv LIB_MPI $&#123;MPI_PATH&#125;/lib</div></pre></td></tr></table></figure></p>
+<p>然后执行cp mkbatch.userdefined mkbatch.newmach,修改按照自己机器的情况,将两句含有mpi执行命令（mpiexec和mpirun）的其中一句解除注释，就可以了</p>
+<h2 id="运行CESM"><a href="#运行CESM" class="headerlink" title="运行CESM"></a>运行CESM</h2><p>先到models/utils/pio下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure</div></pre></td></tr></table></figure></p>
+<p>然后cd到models/utils/mct下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure CC=pgcc FC=pgf90</div></pre></td></tr></table></figure></p>
 <blockquote>
-<p>selenium.common.exceptions.WebDriverException: Message: Missing ‘marionetteProtocol’ field in handshake</p>
+<p>注：如果出现C编译器的相关问题，就重装PGI<br>到scripts目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./create_newcase -case /cesm/cesm1_2_0/case -mach newmach -compset X -res f19_g16</div></pre></td></tr></table></figure></p>
 </blockquote>
-<p>说明<strong>Firefox</strong>的版本太老了，更新之后再运行，发现百度的页面打开，这个简单脚本就运行成功了。</p>
-<p>有时间的时候再探究一下<strong>Chrome</strong>。</p>
+<p>然后进入case那个目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./cesm_setup</div><div class="line">./case.clean_build   (svn :用户名：guestuser   密码：friendly)</div><div class="line">./case.build</div><div class="line">./case.run</div></pre></td></tr></table></figure></p>
+<p>当时摸索用了1个月的时间，希望之后的同学可以少走些弯路。</p>
 
       
 
@@ -296,7 +298,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/15/MacOS-selenium-python极速搭建/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/16/CESM模式1-2-0环境搭建指南/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +312,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/16/CESM模式1-2-0环境搭建指南/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CESM模式1.2.0环境搭建指南
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/14/第一篇个人博客的诞生/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一篇个人博客的诞生</div>
+    <a href="/2017/03/15/MacOS-selenium-python极速搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MacOS + selenium + python 极速搭建</div>
       <i class="icon-circle-right"></i>
     </a>
   
