@@ -5,12 +5,12 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="http://lolilukia.com">
   <title>Lolilukia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Lolilukia">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://lolilukia.com/index.html">
 <meta property="og:site_name" content="Lolilukia">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lolilukia">
@@ -58,30 +58,25 @@ var _hmt = _hmt || [];
 		  <h1 class="header-author"><a href="/">Lolilukia</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">We are the same person</p>
-		
 
 		<nav class="header-menu">
-			<ul>
+			<ul id="sub_ul">
 			
-				<li><a href="/tags/技术/">技术</a></li>
-	        
-				<li><a href="/tags/博客/">随笔</a></li>
-	        
+				
+					<li class="sub_tag"><a class="sub_href">友链</a></li>
+				
+			
+				
+					<li class="sub_tag"><a class="sub_href">关于我</a></li>
+				
+			
 			</ul>
+			<div class="sub_cont"></div>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -114,13 +109,7 @@ var _hmt = _hmt || [];
 			  <h1 class="header-author js-header-author">Lolilukia</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>We are the same person<i class="icon icon-quo-right"></i></p>
 			
-			
-			
-				
-			
-				
 			
 			
 			
@@ -138,10 +127,6 @@ var _hmt = _hmt || [];
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/tags/技术/">技术</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/博客/">随笔</a></li>
-		        
 				</ul>
 			</nav>
 		</header>				
@@ -156,6 +141,69 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="blog-Hexo博客添加404页面和百度统计" class="article article-type-blog  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/23/Hexo博客添加404页面和百度统计/">Hexo博客添加404页面和百度统计</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/23/Hexo博客添加404页面和百度统计/" class="archive-article-date">
+  	<time datetime="2017-03-23T15:23:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近几天一直在下实验数据，实验暂且搁置，用了些时间在改造个人博客上。添加404页面和百度统计，工作量不大，但是非常实用。</p>
+<h2 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h2><p>我使用的是腾讯公益404页面，主要是宣传寻找走失儿童的，借博客的力量让更多人看到，当然自定义404页面也是差不多的道理<br>首先，先在github上或是本地仓库的根目录下新建404.html文件，比如我直接从github的页面上新建编辑的，也是十分方便</p>
+<h3 id="腾讯公益404"><a href="#腾讯公益404" class="headerlink" title="腾讯公益404"></a>腾讯公益404</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/23/Hexo博客添加404页面和百度统计/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-重忆来时路" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -467,29 +515,13 @@ var _hmt = _hmt || [];
       
       
     
-      
-      
-      
-    
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 100%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
     </ul>
@@ -510,11 +542,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -565,25 +597,7 @@ var _hmt = _hmt || [];
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://bazingaga.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>小公主的博客</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">写不出论文的科研狗&lt;br&gt;&lt;br&gt;羽毛球业余爱好者&lt;br&gt;&lt;br&gt;前端初步入坑&lt;br&gt;&lt;br&gt;熟练P图狗&lt;br&gt;&lt;br&gt;文艺女青年&lt;br&gt;&lt;br&gt;&lt;br&gt;在行走中阅读，在睡眠中思考</div>
-  	  	
-    	</section>
     
   </div>
   
