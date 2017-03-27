@@ -64,7 +64,10 @@
 				items: [],
 				jsonFail: !1,
 				showTags: !1,
-				search: ""
+				search: "",
+				lastTag: "",
+				showFri: 0,
+				showAbout: 0
 			},
 			methods: {
 				stop: function(t) {
@@ -81,6 +84,46 @@
 				},
 				openSlider: function(t, n) {
 					t.stopPropagation();n || (n = "innerArchive");e.$set("innerArchive", !1);e.$set("friends", !1);e.$set("aboutme", !1);e.$set(n, !0);if(n=='innerArchive'){e.$set("isShow", !0);e.$set("isCtnShow", !0);}s()
+				},
+				changeBlock: function(t, n) {
+					if(n == "aboutme"){
+						if(e.lastTag == "aboutme"){
+							document.getElementsByClassName(n)[0].style.background = "#dddddd";
+							e.$set("showAbout", !e.showAbout);
+							e.$set("lastTag", "");
+						}
+						else if(e.lastTag == "friends"){
+							document.getElementsByClassName(n)[0].style.background = "#ffffff";
+							document.getElementsByClassName(e.lastTag)[0].style.background = "#dddddd";
+							e.$set("lastTag", "aboutme");
+							e.$set("showAbout", !e.showAbout);
+							e.$set("showFri", !e.showFri);
+						}
+						else{
+							document.getElementsByClassName(n)[0].style.background = "#ffffff";
+							e.$set("lastTag", "aboutme");
+							e.$set("showAbout", !e.showAbout);
+						}
+					}
+					else{
+						if(e.lastTag == "friends"){
+							document.getElementsByClassName(e.lastTag)[0].style.background = "#dddddd";
+							e.$set("showFri", !e.showFri);
+							e.$set("lastTag", "");
+						}
+						else if(e.lastTag == "aboutme"){
+							document.getElementsByClassName(n)[0].style.background = "#ffffff";
+							document.getElementsByClassName(e.lastTag)[0].style.background = "#dddddd";
+							e.$set("lastTag", "friends");
+							e.$set("showAbout", !e.showAbout);
+							e.$set("showFri", !e.showFri);
+						}
+						else{
+							document.getElementsByClassName(n)[0].style.background = "#ffffff";
+							e.$set("lastTag", "friends");
+							e.$set("showFri", !e.showFri);
+						}
+					}
 				}
 			},
 			filters: {
