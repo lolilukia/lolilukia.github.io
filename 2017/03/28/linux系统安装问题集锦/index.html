@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lolilukia.com">
-  <title>Tag: 生活 | Lolilukia</title>
+  <title>linux系统安装问题集锦 | Lolilukia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lolilukia">
-<meta property="og:url" content="http://lolilukia.com/tags/生活/index.html">
+  <meta name="description" content="Centos/win双系统win10引导丢失1vi /boot/grub2/grub.cfg
+加入1234567###BEGIN /etc/grub.d/40_custom###menuentry &amp;quot;windows10&amp;quot;&amp;#123;	insmod part_msdos	insmod ntfs	set root = &amp;apos;(hd0, msdos1)&amp;apos;	chainl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux系统安装问题集锦">
+<meta property="og:url" content="http://lolilukia.com/2017/03/28/linux系统安装问题集锦/index.html">
 <meta property="og:site_name" content="Lolilukia">
+<meta property="og:description" content="Centos/win双系统win10引导丢失1vi /boot/grub2/grub.cfg
+加入1234567###BEGIN /etc/grub.d/40_custom###menuentry &amp;quot;windows10&amp;quot;&amp;#123;	insmod part_msdos	insmod ntfs	set root = &amp;apos;(hd0, msdos1)&amp;apos;	chainl">
+<meta property="og:updated_time" content="2017-03-28T14:40:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lolilukia">
+<meta name="twitter:title" content="linux系统安装问题集锦">
+<meta name="twitter:description" content="Centos/win双系统win10引导丢失1vi /boot/grub2/grub.cfg
+加入1234567###BEGIN /etc/grub.d/40_custom###menuentry &amp;quot;windows10&amp;quot;&amp;#123;	insmod part_msdos	insmod ntfs	set root = &amp;apos;(hd0, msdos1)&amp;apos;	chainl">
   
     <link rel="alternative" href="/atom.xml" title="Lolilukia" type="application/atom+xml">
   
@@ -145,60 +152,157 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-linux系统安装问题集锦" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/19/重忆来时路/" class="archive-article-date">
-  	<time datetime="2017-03-19T07:06:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/19/重忆来时路/">重忆来时路</a>
+    <h1 class="article-title" itemprop="name">
+      linux系统安装问题集锦
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/03/28/linux系统安装问题集锦/" class="archive-article-date">
+  	<time datetime="2017-03-28T07:22:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Centos-win双系统win10引导丢失"><a href="#Centos-win双系统win10引导丢失" class="headerlink" title="Centos/win双系统win10引导丢失"></a>Centos/win双系统win10引导丢失</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /boot/grub2/grub.cfg</div></pre></td></tr></table></figure>
+<p>加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">###BEGIN /etc/grub.d/40_custom###</div><div class="line">menuentry &quot;windows10&quot;&#123;</div><div class="line">	insmod part_msdos</div><div class="line">	insmod ntfs</div><div class="line">	set root = &apos;(hd0, msdos1)&apos;</div><div class="line">	chainloader+1</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="安装系统时出现UEFI问题"><a href="#安装系统时出现UEFI问题" class="headerlink" title="安装系统时出现UEFI问题"></a>安装系统时出现UEFI问题</h2><p>分区时将<strong>/boot/efi</strong>添加进去</p>
+<h2 id="系统启动时出现dracut-initqueue问题"><a href="#系统启动时出现dracut-initqueue问题" class="headerlink" title="系统启动时出现dracut-initqueue问题"></a>系统启动时出现dracut-initqueue问题</h2><blockquote>
+<p>warning: /dev/root does not exist<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dracut:/# cd /dev</div><div class="line">dracut:/dev #ls</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>将启动项改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hd: /dev/sdb4 xxxx quiet</div></pre></td></tr></table></figure></p>
+<h2 id="系统安装时将引导程序装在了U盘上"><a href="#系统安装时将引导程序装在了U盘上" class="headerlink" title="系统安装时将引导程序装在了U盘上"></a>系统安装时将引导程序装在了U盘上</h2><p>用U盘启动，在终端中输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$sudo grub</div><div class="line">grub&gt; find /boot/grub/stage1</div></pre></td></tr></table></figure></p>
+<p>然后记录下打印的结果<br>修改menulist文件，将记录下的结果放在<strong>root</strong>的后面</p>
+<h2 id="使用ssh-add"><a href="#使用ssh-add" class="headerlink" title="使用ssh-add"></a>使用ssh-add</h2><p>出现<strong>Could not open a connection</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh-agent bash --login -i</div><div class="line">ssh-add ~/.ssh/id_rsa</div></pre></td></tr></table></figure></p>
+<h2 id="使用yum安装"><a href="#使用yum安装" class="headerlink" title="使用yum安装"></a>使用yum安装</h2><p>出现<strong>Another app is currently holding the yumlock</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -f /var/run/yum.pid</div></pre></td></tr></table></figure></p>
+<h2 id="Can’t-locate-Switch-pm-in-INC"><a href="#Can’t-locate-Switch-pm-in-INC" class="headerlink" title="Can’t locate Switch.pm in @INC"></a>Can’t locate Switch.pm in @INC</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install perl-Switch</div></pre></td></tr></table></figure>
+<h2 id="Host-key-verification-failed"><a href="#Host-key-verification-failed" class="headerlink" title="Host key verification failed"></a>Host key verification failed</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -R xxx(要连接的服务器IP)</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://lolilukia.com/2017/03/28/linux系统安装问题集锦/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/03/23/Hexo博客添加404页面和百度统计/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo博客添加404页面和百度统计</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="linux系统安装问题集锦" data-title="linux系统安装问题集锦" data-url="http://lolilukia.com/2017/03/28/linux系统安装问题集锦/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"lolilukia"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</div>
   
 
-    
+
 
 
           </div>
@@ -221,9 +325,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
