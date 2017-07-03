@@ -147,6 +147,94 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-科学上网黑喂够" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/03/科学上网黑喂够/">科学上网黑喂够</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/03/科学上网黑喂够/" class="archive-article-date">
+  	<time datetime="2017-07-03T02:24:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一直在探索如何科学上网，经历了红杏、时空隧道、小狐狸的充年跑之后，决心开辟一条长期有效极速舒心的科学道路。<br>妈妈再也不用担心买裙裙的小钱钱扔进黄浦江了，服务更是比从前优秀了太多。<br>闲话不多说，迅速开始我们的探索之旅。</p>
+<h1 id="租用vps"><a href="#租用vps" class="headerlink" title="租用vps"></a>租用vps</h1><p><a href="http://www.vultr.com/?ref=7180046" target="_blank" rel="external">Vultr</a>是提供日本、美国、欧洲等多个国家地区机房的vps主机商，是目前市面上性价比较高的，最低档的带宽日常使用应该能结余不少，同时在线的可有3-5人，平摊到一人的费用大概7-12软妹币每月。</p>
+<p>Vultr的资费基本如图所示：<br><img src="https://cl.ly/1q27242w0g1U/download/vultr.png" alt=""><br>实测2.5美刀的套餐已经停售，满送的活动也截止上半年，果然绝缘体的生涯就是这么坎坷。不管怎样，还是尽快上车。<br>Vultr不支持宝宝付款，不过注册个Paypal还是分分钟的事，so easy。</p>
+<h1 id="部署vps"><a href="#部署vps" class="headerlink" title="部署vps"></a>部署vps</h1><p>注册<a href="http://www.vultr.com/?ref=7180046" target="_blank" rel="external">Vultr</a>之后，点击servers的蓝色加号，进入配置页面，前面两个配置建议如下，东京的速度比较快。<br><img src="https://cl.ly/1w2s391P1L0B/download/Image%202017-07-03%20at%2011.23.06.public.png" alt=""><br><img src="https://cl.ly/3I2K2A00030y/download/Image%202017-07-03%20at%2011.24.11.public.png" alt=""></p>
+<p>选资费的时候，我们看到2.5美刀的已经停售了，5美刀的3，5个小伙伴使用还是很稳的，当然还有其他资费可以选择。<br><img src="https://cl.ly/3C2O3d003X0l/download/Image%202017-07-03%20at%2011.28.57.public.png" alt=""></p>
+<p>最后一项设置你vps的名字<br><img src="https://cl.ly/1S0d152B2m0S/download/Image%202017-07-03%20at%2011.35.31.public.png" alt=""></p>
+<p>其他的都不用设置，然后直接点击部署<br><img src="https://cl.ly/0V183P423N0Z/download/Image%202017-07-03%20at%2011.30.24.public.png" alt=""></p>
+<h1 id="连接vps"><a href="#连接vps" class="headerlink" title="连接vps"></a>连接vps</h1><p>点击查看你刚部署的vps<br><img src="https://cl.ly/0K231335202R/download/Image%202017-07-03%20at%2011.37.24.public.png" alt=""></p>
+<p>借助一些连接远程服务器的软件比如xshell就可以访问你刚刚部署的vps,当然使用mac OSX的小伙伴可以直接用终端。<br><img src="https://cl.ly/2D2w2x0T2k1e/download/Image%202017-07-03%20at%2011.34.38.public.png" alt=""></p>
+<p>输入yes和密码，回车</p>
+<h1 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h1><p>需要同时在vps和你的pc上安装部署shadowsocks，首先在vps的centos 7上安装shadowsocks。</p>
+<blockquote>
+<p>wget –no-check-certificate <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh" target="_blank" rel="external">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</a><br>chmod +x shadowsocks.sh<br>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</p>
+</blockquote>
+<p>然后会提示你输入密码和端口，我们可以根据端口来分配用户，输入密码和端口之后，就出现了如下的信息<br><img src="https://cl.ly/041v2i0u1X1n/download/Image%202017-07-03%20at%2012.30.14.public.png" alt=""></p>
+<p>安装客户端shadowsocks<br><img src="https://cl.ly/040O1F112437/download/Image%202017-07-03%20at%2012.33.42.public.png" alt=""></p>
+<p>设置服务器设定<br><img src="https://cl.ly/243C1a2K3K3j/download/Image%202017-07-03%20at%2012.36.15.public.png" alt=""></p>
+<h3 id="设置多用户"><a href="#设置多用户" class="headerlink" title="设置多用户"></a>设置多用户</h3><p>如果想添加用户，修改vps上的json文件即可，输入以下的命令</p>
+<blockquote>
+<p>cd /etc<br>vi shadowsocks.json</p>
+</blockquote>
+<p>我这里的文件的内容如下：<br><img src="https://cl.ly/0G202X3a301q/download/ddj.png" alt=""></p>
+<p>22345就是新添加的用户，设置一个独立的密码，就是在shadowsocks客户端配置的时候输入的。按i进入编辑模式，按esc退出编辑，再按两下大写z退出该文件，然后重启shadowsocks服务器端。</p>
+<blockquote>
+<p>/etc/init.d/shadowsocks restart</p>
+</blockquote>
+<p>稳如狗<br>开始我们的科学上网之旅吧</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">shadowsocks</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/03/科学上网黑喂够/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Mac-OSX下phpMyAdmin安装配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -736,72 +824,10 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-第一篇个人博客的诞生" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/14/第一篇个人博客的诞生/">第一篇个人博客的诞生</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/14/第一篇个人博客的诞生/" class="archive-article-date">
-  	<time datetime="2017-03-14T15:42:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>大学四年转瞬而过，始终都没有时间好好地写一篇博客，在回顾过去的历程之前，记录一下这篇博客诞生的始末。</p>
-<p>这篇博客使用了简洁轻便的Hexo平台和github的免费挂载，可能在未来某个打算花费大量精力打造博客的时刻购买一个个性化的域名。</p>
-<p>第一篇个人博客的诞生，是一个值得纪念的时间节点，代表我终于从长时间的焦虑中逐渐缓解，学会如何分享和思考。<br>
-        
-          <a class="article-more-a" href="/2017/03/14/第一篇个人博客的诞生/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/14/第一篇个人博客的诞生/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -883,15 +909,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">shadowsocks</a>
               </li>
             
             <div class="clearfix"></div>

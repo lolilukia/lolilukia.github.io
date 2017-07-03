@@ -6,26 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lolilukia.com">
-  <title>MacOS + selenium + python 极速搭建 | Lolilukia</title>
+  <title>科学上网黑喂够 | Lolilukia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的Eclipse，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试MacOS的水。
-不得不说，MacOS是真方便啊。
-环境搭建MacOS自带了python2.7，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用sublime即可，美观高亮">
+  <meta name="description" content="一直在探索如何科学上网，经历了红杏、时空隧道、小狐狸的充年跑之后，决心开辟一条长期有效极速舒心的科学道路。妈妈再也不用担心买裙裙的小钱钱扔进黄浦江了，服务更是比从前优秀了太多。闲话不多说，迅速开始我们的探索之旅。
+租用vpsVultr是提供日本、美国、欧洲等多个国家地区机房的vps主机商，是目前市面上性价比较高的，最低档的带宽日常使用应该能结余不少，同时在线的可有3-5人，平摊到一人的费用大概7-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MacOS + selenium + python 极速搭建">
-<meta property="og:url" content="http://lolilukia.com/2017/03/15/MacOS-selenium-python极速搭建/index.html">
+<meta property="og:title" content="科学上网黑喂够">
+<meta property="og:url" content="http://lolilukia.com/2017/07/03/科学上网黑喂够/index.html">
 <meta property="og:site_name" content="Lolilukia">
-<meta property="og:description" content="大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的Eclipse，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试MacOS的水。
-不得不说，MacOS是真方便啊。
-环境搭建MacOS自带了python2.7，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用sublime即可，美观高亮">
-<meta property="og:image" content="https://cl.ly/103G3c3X383L/download/[644114119faae046396e6ca98c8ffafb]_Image%202017-03-15%20at%2010.33.32.png">
-<meta property="og:updated_time" content="2017-05-07T01:26:32.000Z">
+<meta property="og:description" content="一直在探索如何科学上网，经历了红杏、时空隧道、小狐狸的充年跑之后，决心开辟一条长期有效极速舒心的科学道路。妈妈再也不用担心买裙裙的小钱钱扔进黄浦江了，服务更是比从前优秀了太多。闲话不多说，迅速开始我们的探索之旅。
+租用vpsVultr是提供日本、美国、欧洲等多个国家地区机房的vps主机商，是目前市面上性价比较高的，最低档的带宽日常使用应该能结余不少，同时在线的可有3-5人，平摊到一人的费用大概7-">
+<meta property="og:image" content="https://cl.ly/1q27242w0g1U/download/vultr.png">
+<meta property="og:image" content="https://cl.ly/1w2s391P1L0B/download/Image%202017-07-03%20at%2011.23.06.public.png">
+<meta property="og:image" content="https://cl.ly/3I2K2A00030y/download/Image%202017-07-03%20at%2011.24.11.public.png">
+<meta property="og:image" content="https://cl.ly/3C2O3d003X0l/download/Image%202017-07-03%20at%2011.28.57.public.png">
+<meta property="og:image" content="https://cl.ly/1S0d152B2m0S/download/Image%202017-07-03%20at%2011.35.31.public.png">
+<meta property="og:image" content="https://cl.ly/0V183P423N0Z/download/Image%202017-07-03%20at%2011.30.24.public.png">
+<meta property="og:image" content="https://cl.ly/0K231335202R/download/Image%202017-07-03%20at%2011.37.24.public.png">
+<meta property="og:image" content="https://cl.ly/2D2w2x0T2k1e/download/Image%202017-07-03%20at%2011.34.38.public.png">
+<meta property="og:image" content="https://cl.ly/041v2i0u1X1n/download/Image%202017-07-03%20at%2012.30.14.public.png">
+<meta property="og:image" content="https://cl.ly/040O1F112437/download/Image%202017-07-03%20at%2012.33.42.public.png">
+<meta property="og:image" content="https://cl.ly/243C1a2K3K3j/download/Image%202017-07-03%20at%2012.36.15.public.png">
+<meta property="og:image" content="https://cl.ly/0G202X3a301q/download/ddj.png">
+<meta property="og:updated_time" content="2017-07-03T04:49:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MacOS + selenium + python 极速搭建">
-<meta name="twitter:description" content="大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的Eclipse，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试MacOS的水。
-不得不说，MacOS是真方便啊。
-环境搭建MacOS自带了python2.7，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用sublime即可，美观高亮">
-<meta name="twitter:image" content="https://cl.ly/103G3c3X383L/download/[644114119faae046396e6ca98c8ffafb]_Image%202017-03-15%20at%2010.33.32.png">
+<meta name="twitter:title" content="科学上网黑喂够">
+<meta name="twitter:description" content="一直在探索如何科学上网，经历了红杏、时空隧道、小狐狸的充年跑之后，决心开辟一条长期有效极速舒心的科学道路。妈妈再也不用担心买裙裙的小钱钱扔进黄浦江了，服务更是比从前优秀了太多。闲话不多说，迅速开始我们的探索之旅。
+租用vpsVultr是提供日本、美国、欧洲等多个国家地区机房的vps主机商，是目前市面上性价比较高的，最低档的带宽日常使用应该能结余不少，同时在线的可有3-5人，平摊到一人的费用大概7-">
+<meta name="twitter:image" content="https://cl.ly/1q27242w0g1U/download/vultr.png">
   
     <link rel="alternative" href="/atom.xml" title="Lolilukia" type="application/atom+xml">
   
@@ -157,46 +165,53 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MacOS-selenium-python极速搭建" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-科学上网黑喂够" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MacOS + selenium + python 极速搭建
+      科学上网黑喂够
     </h1>
   
 
         
-        <a href="/2017/03/15/MacOS-selenium-python极速搭建/" class="archive-article-date">
-  	<time datetime="2017-03-15T02:58:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
+        <a href="/2017/07/03/科学上网黑喂够/" class="archive-article-date">
+  	<time datetime="2017-07-03T02:24:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>大四实习临离职的时候做过一周的自动化测试，用的是公司电脑里的<strong>Eclipse</strong>，导了几个jar包，用java写的一套自动化测试，比较入门，但是实现测试用例还是足够了的，如今为了小公主的面试，我决定试试<strong>MacOS</strong>的水。</p>
-<p>不得不说，<strong>MacOS</strong>是真方便啊。</p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p><strong>MacOS</strong>自带了<strong>python2.7</strong>，默认安装目录是/usr/bin/python, 还需要一个文本编辑器，用<a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime</a>即可，美观高亮</p>
-<p><img src="https://cl.ly/103G3c3X383L/download/[644114119faae046396e6ca98c8ffafb]_Image%202017-03-15%20at%2010.33.32.png" alt="sublime"><br><a id="more"></a></p>
-<p>安装<strong>selenium</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo easy_install selenium</div></pre></td></tr></table></figure></p>
-<p>以Firefox为例，安装<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="external">geckodriver</a>驱动<br>下载解压之后，移动到/usr/local/bin中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mv ~/Downloads/geckodriver /usr/local/bin/</div></pre></td></tr></table></figure></p>
-<p>如果出现了以下的问题，就是没有安装<strong>geckodriver</strong></p>
+        <p>一直在探索如何科学上网，经历了红杏、时空隧道、小狐狸的充年跑之后，决心开辟一条长期有效极速舒心的科学道路。<br>妈妈再也不用担心买裙裙的小钱钱扔进黄浦江了，服务更是比从前优秀了太多。<br>闲话不多说，迅速开始我们的探索之旅。</p>
+<h1 id="租用vps"><a href="#租用vps" class="headerlink" title="租用vps"></a>租用vps</h1><p><a href="http://www.vultr.com/?ref=7180046" target="_blank" rel="external">Vultr</a>是提供日本、美国、欧洲等多个国家地区机房的vps主机商，是目前市面上性价比较高的，最低档的带宽日常使用应该能结余不少，同时在线的可有3-5人，平摊到一人的费用大概7-12软妹币每月。</p>
+<p>Vultr的资费基本如图所示：<br><img src="https://cl.ly/1q27242w0g1U/download/vultr.png" alt=""><br>实测2.5美刀的套餐已经停售，满送的活动也截止上半年，果然绝缘体的生涯就是这么坎坷。不管怎样，还是尽快上车。<br>Vultr不支持宝宝付款，不过注册个Paypal还是分分钟的事，so easy。</p>
+<h1 id="部署vps"><a href="#部署vps" class="headerlink" title="部署vps"></a>部署vps</h1><p>注册<a href="http://www.vultr.com/?ref=7180046" target="_blank" rel="external">Vultr</a>之后，点击servers的蓝色加号，进入配置页面，前面两个配置建议如下，东京的速度比较快。<br><img src="https://cl.ly/1w2s391P1L0B/download/Image%202017-07-03%20at%2011.23.06.public.png" alt=""><br><img src="https://cl.ly/3I2K2A00030y/download/Image%202017-07-03%20at%2011.24.11.public.png" alt=""></p>
+<p>选资费的时候，我们看到2.5美刀的已经停售了，5美刀的3，5个小伙伴使用还是很稳的，当然还有其他资费可以选择。<br><img src="https://cl.ly/3C2O3d003X0l/download/Image%202017-07-03%20at%2011.28.57.public.png" alt=""></p>
+<p>最后一项设置你vps的名字<br><img src="https://cl.ly/1S0d152B2m0S/download/Image%202017-07-03%20at%2011.35.31.public.png" alt=""></p>
+<p>其他的都不用设置，然后直接点击部署<br><img src="https://cl.ly/0V183P423N0Z/download/Image%202017-07-03%20at%2011.30.24.public.png" alt=""></p>
+<h1 id="连接vps"><a href="#连接vps" class="headerlink" title="连接vps"></a>连接vps</h1><p>点击查看你刚部署的vps<br><img src="https://cl.ly/0K231335202R/download/Image%202017-07-03%20at%2011.37.24.public.png" alt=""></p>
+<p>借助一些连接远程服务器的软件比如xshell就可以访问你刚刚部署的vps,当然使用mac OSX的小伙伴可以直接用终端。<br><img src="https://cl.ly/2D2w2x0T2k1e/download/Image%202017-07-03%20at%2011.34.38.public.png" alt=""></p>
+<p>输入yes和密码，回车</p>
+<h1 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h1><p>需要同时在vps和你的pc上安装部署shadowsocks，首先在vps的centos 7上安装shadowsocks。</p>
 <blockquote>
-<p>selenium.common.exceptions.WebDriverException: Message: ‘geckodriver’ executable needs to be in PATH.</p>
+<p>wget –no-check-certificate <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh" target="_blank" rel="external">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</a><br>chmod +x shadowsocks.sh<br>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</p>
 </blockquote>
-<h2 id="简单的自动化测试脚本"><a href="#简单的自动化测试脚本" class="headerlink" title="简单的自动化测试脚本"></a>简单的自动化测试脚本</h2><p>打开<strong>sublime</strong>，键入几句简单的测试代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">from selenium import webdriver</div><div class="line">from selenium.common.exceptions import NoSuchElementException</div><div class="line">from selenium.webdriver.common.keys import Keys</div><div class="line">import time</div><div class="line"></div><div class="line">browser = webdriver.Firefox() </div><div class="line">browser.get(&quot;http://www.baidu.com&quot;) </div><div class="line">assert &quot;Hahaha&quot; in browser.title</div><div class="line">browser.close()</div></pre></td></tr></table></figure></p>
-<p>保存成<strong>test.py</strong>，然后在命令行中运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python test.py</div></pre></td></tr></table></figure></p>
-<p>如果出现了如下的错误</p>
+<p>然后会提示你输入密码和端口，我们可以根据端口来分配用户，输入密码和端口之后，就出现了如下的信息<br><img src="https://cl.ly/041v2i0u1X1n/download/Image%202017-07-03%20at%2012.30.14.public.png" alt=""></p>
+<p>安装客户端shadowsocks<br><img src="https://cl.ly/040O1F112437/download/Image%202017-07-03%20at%2012.33.42.public.png" alt=""></p>
+<p>设置服务器设定<br><img src="https://cl.ly/243C1a2K3K3j/download/Image%202017-07-03%20at%2012.36.15.public.png" alt=""></p>
+<h3 id="设置多用户"><a href="#设置多用户" class="headerlink" title="设置多用户"></a>设置多用户</h3><p>如果想添加用户，修改vps上的json文件即可，输入以下的命令</p>
 <blockquote>
-<p>selenium.common.exceptions.WebDriverException: Message: Missing ‘marionetteProtocol’ field in handshake</p>
+<p>cd /etc<br>vi shadowsocks.json</p>
 </blockquote>
-<p>说明<strong>Firefox</strong>的版本太老了，更新之后再运行，发现百度的页面打开，这个简单脚本就运行成功了。</p>
-<p>有时间的时候再探究一下<strong>Chrome</strong>。</p>
-<h2 id="一个稍显复杂的例子"><a href="#一个稍显复杂的例子" class="headerlink" title="一个稍显复杂的例子"></a>一个稍显复杂的例子</h2><h3 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h3><p>这个脚本的作用是从豆瓣某个小组里面搜索包含‘上海’关键词的帖子，然后一分钟一刷新浏览器，出现新帖子就给目标邮箱发邮件，邮件正文内容就是帖子的链接。</p>
-<h3 id="脚本地址"><a href="#脚本地址" class="headerlink" title="脚本地址"></a>脚本地址</h3><p><a href="https://github.com/lolilukia/douban_script" target="_blank" rel="external">douban_script</a></p>
+<p>我这里的文件的内容如下：<br><img src="https://cl.ly/0G202X3a301q/download/ddj.png" alt=""></p>
+<p>22345就是新添加的用户，设置一个独立的密码，就是在shadowsocks客户端配置的时候输入的。按i进入编辑模式，按esc退出编辑，再按两下大写z退出该文件，然后重启shadowsocks服务器端。</p>
+<blockquote>
+<p>/etc/init.d/shadowsocks restart</p>
+</blockquote>
+<p>稳如狗<br>开始我们的科学上网之旅吧</p>
 
       
 
@@ -210,7 +225,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">shadowsocks</a>
         		</li>
       		
 		</ul>
@@ -266,7 +281,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://lolilukia.com/2017/03/15/MacOS-selenium-python极速搭建/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://lolilukia.com/2017/07/03/科学上网黑喂够/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,18 +295,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/03/16/CESM模式1-2-0环境搭建指南/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CESM模式1.2.0环境搭建指南
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/14/第一篇个人博客的诞生/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一篇个人博客的诞生</div>
+    <a href="/2017/05/07/Mac-OSX下phpMyAdmin安装配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac OSX下phpMyAdmin安装配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
