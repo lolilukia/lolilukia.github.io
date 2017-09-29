@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lolilukia.com">
-  <title>Centos集群搭建 | Lolilukia</title>
+  <title>部署在vultr上的python flask微信小程序后台 | Lolilukia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关闭防火墙和SELinux123#systemctl disable firewalld#systemctl stop firewalldvi /etc/sysconfig/selinux  确保SELINUX=disabled
-然后执行1setenforce或reboot">
+  <meta name="description" content="最近打算给羽毛球协会写个微信小程序，希望能由此推动无纸化进程。从大一开始，亲历了这个社团非常多的变化，从刚开始固定人数，现场填写表格到后来的微信群，群里报名统计，但干事的工作还是比较繁重的，其实这也是很多社团面临的问题。
+目前还处于程序开发的初级阶段，后台选用了python的flask框架，尽管php是世界上最好的语言，人生苦短，我用python。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Centos集群搭建">
-<meta property="og:url" content="http://lolilukia.com/2017/04/04/Centos集群搭建/index.html">
+<meta property="og:title" content="部署在vultr上的python flask微信小程序后台">
+<meta property="og:url" content="http://lolilukia.com/2017/09/28/部署在vultr上的python-flask微信小程序后台/index.html">
 <meta property="og:site_name" content="Lolilukia">
-<meta property="og:description" content="关闭防火墙和SELinux123#systemctl disable firewalld#systemctl stop firewalldvi /etc/sysconfig/selinux  确保SELINUX=disabled
-然后执行1setenforce或reboot">
-<meta property="og:updated_time" content="2017-04-18T01:22:16.000Z">
+<meta property="og:description" content="最近打算给羽毛球协会写个微信小程序，希望能由此推动无纸化进程。从大一开始，亲历了这个社团非常多的变化，从刚开始固定人数，现场填写表格到后来的微信群，群里报名统计，但干事的工作还是比较繁重的，其实这也是很多社团面临的问题。
+目前还处于程序开发的初级阶段，后台选用了python的flask框架，尽管php是世界上最好的语言，人生苦短，我用python。">
+<meta property="og:updated_time" content="2017-09-28T16:20:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Centos集群搭建">
-<meta name="twitter:description" content="关闭防火墙和SELinux123#systemctl disable firewalld#systemctl stop firewalldvi /etc/sysconfig/selinux  确保SELINUX=disabled
-然后执行1setenforce或reboot">
+<meta name="twitter:title" content="部署在vultr上的python flask微信小程序后台">
+<meta name="twitter:description" content="最近打算给羽毛球协会写个微信小程序，希望能由此推动无纸化进程。从大一开始，亲历了这个社团非常多的变化，从刚开始固定人数，现场填写表格到后来的微信群，群里报名统计，但干事的工作还是比较繁重的，其实这也是很多社团面临的问题。
+目前还处于程序开发的初级阶段，后台选用了python的flask框架，尽管php是世界上最好的语言，人生苦短，我用python。">
   
     <link rel="alternative" href="/atom.xml" title="Lolilukia" type="application/atom+xml">
   
@@ -152,39 +152,74 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Centos集群搭建" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-部署在vultr上的python-flask微信小程序后台" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Centos集群搭建
+      部署在vultr上的python flask微信小程序后台
     </h1>
   
 
         
-        <a href="/2017/04/04/Centos集群搭建/" class="archive-article-date">
-  	<time datetime="2017-04-04T09:16:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-04</time>
+        <a href="/2017/09/28/部署在vultr上的python-flask微信小程序后台/" class="archive-article-date">
+  	<time datetime="2017-09-28T06:05:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="关闭防火墙和SELinux"><a href="#关闭防火墙和SELinux" class="headerlink" title="关闭防火墙和SELinux"></a>关闭防火墙和SELinux</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#systemctl disable firewalld</div><div class="line">#systemctl stop firewalld</div><div class="line">vi /etc/sysconfig/selinux  确保SELINUX=disabled</div></pre></td></tr></table></figure>
-<p>然后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setenforce或reboot</div></pre></td></tr></table></figure></p>
+        <p>最近打算给羽毛球协会写个微信小程序，希望能由此推动无纸化进程。从大一开始，亲历了这个社团非常多的变化，从刚开始固定人数，现场填写表格到后来的微信群，群里报名统计，但干事的工作还是比较繁重的，其实这也是很多社团面临的问题。</p>
+<p>目前还处于程序开发的初级阶段，后台选用了python的flask框架，尽管php是世界上最好的语言，人生苦短，我用python。</p>
 <a id="more"></a>
-<h2 id="设置防火墙规则"><a href="#设置防火墙规则" class="headerlink" title="设置防火墙规则"></a>设置防火墙规则</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --permanent --add-service=high-availability</div><div class="line">firewall-cmd --add-service=high-availability</div></pre></td></tr></table></figure>
-<h2 id="主机名解析"><a href="#主机名解析" class="headerlink" title="主机名解析"></a>主机名解析</h2><ul>
-<li><p>修改主机名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">vi /etc/hostname</div><div class="line">node1</div><div class="line">systemctl restart network.service</div><div class="line">hostname</div><div class="line">node1  验证是否为node1</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置主机表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vi /etc/hosts</div><div class="line">192.168.xx.xx node1</div><div class="line">192.168.xx.xx node2</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="配置无密访问"><a href="#配置无密访问" class="headerlink" title="配置无密访问"></a>配置无密访问</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div><div class="line">scp /root/.ssh/id_rsa.pub root@node2:/root/.ssh/authorized_keys</div><div class="line">ssh node2 date  //测试</div></pre></td></tr></table></figure>
+<p>首先面对的一个问题就是外部接口，突然想起为了科学上网搭建的vps，值得担忧的问题是vultr的ping太高，处理同时报名活动这种高并发事件可能会有问题。但是还是先把功能完成，后续成熟时再租阿里云腾讯云啥的好了。</p>
+<h2 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h2><p>闲话少叙，我们直接进入本地环境的搭建环节。由于我是OSX系统，自带了python 2.7，另外由于我也经常写python，所以pip也是必不可少的。</p>
+<h4 id="安装virtualenv"><a href="#安装virtualenv" class="headerlink" title="安装virtualenv"></a>安装virtualenv</h4><p>下载链接 <a href="https://pypi.python.org/pypi/virtualenv" target="_blank" rel="external"><strong>virtualenv</strong></a></p>
+<p>其中我选择的是python wheel, 安装命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -H pip install virtualenv-15.1.0-py2.py3-none-any.whl</div></pre></td></tr></table></figure>
+<h4 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h4><p>新建项目并安装flask包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mkdir test_api</div><div class="line">cd test_api</div><div class="line">virtualenv flask</div><div class="line">flask/bin/pip install flask</div></pre></td></tr></table></figure>
+<p>回到test_api目录，新建一个初始文件<strong>app.py</strong>，是一个hello world的简单示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#!flask/bin/python</div><div class="line">from flask import Flask</div><div class="line"></div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line">@app.route(&apos;/&apos;)</div><div class="line">def index():</div><div class="line">    return &quot;Hello, World!&quot;</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    app.run(debug=True)</div></pre></td></tr></table></figure>
+<p>然后就可以在本地看到这个api返回的hello world了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">chmod a+x app.py</div><div class="line">./app.py</div></pre></td></tr></table></figure>
+<p>第一次使用这个框架，我的做法是在本地调试，调试完成后再部署到服务器上，可以想到服务器返回结果可能会比较慢。</p>
+<h2 id="服务器环境"><a href="#服务器环境" class="headerlink" title="服务器环境"></a>服务器环境</h2><p>我们最终的目的还是要将上述开发好的源码部署到服务器上，我选用的是现成的vultr，预装的是centos系统（只是因为我对centos比较熟悉，但其实Ubuntu类库更多也更主流）</p>
+<p>首先我们连接到远程服务器，搭建一下python的环境</p>
+<h4 id="python环境搭建"><a href="#python环境搭建" class="headerlink" title="python环境搭建"></a>python环境搭建</h4><p>下载地址：<a href="https://www.python.org/downloads/source/" target="_blank" rel="external"><strong>python</strong></a></p>
+<p>我这里依旧选择了python2.7，懒得在本地更新到python3，两者的写法也有很大的区别。</p>
+<p>解压安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">xz -d Python.xz</div><div class="line">tar -xvf Python.tar</div><div class="line">cd Python</div><div class="line">./configure</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
+<p>配置环境变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">vi ~/.bashrc</div><div class="line">加入一行</div><div class="line">export PATH=&quot;$PATH:/usr/local/bin/python&quot;</div><div class="line">返回</div><div class="line">source ~/.bashrc</div></pre></td></tr></table></figure>
+<p>输入python,出现相关信息说明安装完毕。</p>
+<h4 id="安装pip和virtualenv"><a href="#安装pip和virtualenv" class="headerlink" title="安装pip和virtualenv"></a>安装pip和virtualenv</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install python-pip python-virtualenv</div></pre></td></tr></table></figure>
+<p>关闭端口8080</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -A INPUT -p tcp --destination-port 8080 -j DROP</div></pre></td></tr></table></figure>
+<p>和本地差不多的步骤</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mkdir test_api</div><div class="line">cd test_api</div><div class="line">virtualenv flask</div><div class="line">source flask/bin/activate</div><div class="line">cd flask</div><div class="line">pip install gunicorn</div><div class="line">pip install flask</div></pre></td></tr></table></figure>
+<p>新建文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi app.py</div></pre></td></tr></table></figure>
+<p>给出vultr官网的一个例子，粘贴到app.py中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">from flask import Flask</div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line">@app.route(&apos;/&apos;)</div><div class="line">def hello_world():</div><div class="line">    return &apos;Hello, Vultr!&apos;</div></pre></td></tr></table></figure>
+<p>生成页面，其中2代表的是服务器CPU核心数的2倍的值，我的CPU core是1，所以这里就是2，冒号前面是py文件的名称，后面永远都是app:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gunicorn -w 2 app:app &amp;</div></pre></td></tr></table></figure>
+<p>安装nginx，nginx支持多种配置，暂时只有这一个app，因此我就修改了默认配置:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deactivate</div><div class="line">yum install nginx</div><div class="line">vi /etc/nginx/nginx.conf</div></pre></td></tr></table></figure>
+<p>将以下的内容粘贴进<strong>location /</strong>后面的一对大括号里：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">proxy_set_header HOST $host;</div><div class="line">proxy_set_header X-Forwarded-Proto $scheme;</div><div class="line">proxy_set_header X-Real-IP $remote_addr;</div><div class="line">proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</div><div class="line">proxy_pass http://localhost:8000/;</div></pre></td></tr></table></figure>
+<p>检测一下nginx的语法是否正确：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx -t -c /etc/nginx/nginx.conf</div></pre></td></tr></table></figure>
+<p>启动nginx:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/sbin/nginx -c /etc/nginx/nginx.conf</div></pre></td></tr></table></figure>
+<p>如修改了nginx.conf，可以重新加载：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx -s reload</div></pre></td></tr></table></figure>
+<p>然后输入<strong>http:/vps的ip/</strong>就可以看到<strong>Hello Vultr</strong>的字样啦</p>
+<p>好了，这一期先写到这里，后面有时间跟进会发布新的博客（然而应该并没有谁来看）。</p>
+
       
 
       
@@ -192,17 +227,6 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -253,7 +277,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://lolilukia.com/2017/04/04/Centos集群搭建/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://lolilukia.com/2017/09/28/部署在vultr上的python-flask微信小程序后台/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,18 +291,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/04/15/Linux实用指令记录/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Linux实用指令记录
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/28/linux系统安装问题集锦/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">linux系统安装问题集锦</div>
+    <a href="/2017/07/13/丧到爆炸的七月/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">丧到爆炸的七月</div>
       <i class="icon-circle-right"></i>
     </a>
   
