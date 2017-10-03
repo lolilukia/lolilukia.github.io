@@ -6,14 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lolilukia.com">
-  <title>Archives: 2017/5 | Lolilukia</title>
+  <title>python flask连接mysql数据库 | Lolilukia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lolilukia">
-<meta property="og:url" content="http://lolilukia.com/archives/2017/05/index.html">
+  <meta name="description" content="flask连接mysql数据库踩了非常多的坑，后悔没有用php写后端，抛弃了熟悉的phpMyAdmin，命令行操作不熟的我选择了MySQL workbench。
+MySQL Workbench">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python flask连接mysql数据库">
+<meta property="og:url" content="http://lolilukia.com/2017/10/02/python-flask连接mysql数据库/index.html">
 <meta property="og:site_name" content="Lolilukia">
+<meta property="og:description" content="flask连接mysql数据库踩了非常多的坑，后悔没有用php写后端，抛弃了熟悉的phpMyAdmin，命令行操作不熟的我选择了MySQL workbench。
+MySQL Workbench">
+<meta property="og:image" content="https://cl.ly/0I3e1M0M2v0q/download/Image%202017-10-03%20at%2010.33.06.png">
+<meta property="og:updated_time" content="2017-10-03T02:57:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lolilukia">
+<meta name="twitter:title" content="python flask连接mysql数据库">
+<meta name="twitter:description" content="flask连接mysql数据库踩了非常多的坑，后悔没有用php写后端，抛弃了熟悉的phpMyAdmin，命令行操作不熟的我选择了MySQL workbench。
+MySQL Workbench">
+<meta name="twitter:image" content="https://cl.ly/0I3e1M0M2v0q/download/Image%202017-10-03%20at%2010.33.06.png">
   
     <link rel="alternative" href="/atom.xml" title="Lolilukia" type="application/atom+xml">
   
@@ -145,60 +154,155 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python-flask连接mysql数据库" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/07/Mac-OSX下phpMyAdmin安装配置/" class="archive-article-date">
-  	<time datetime="2017-05-07T06:26:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/07/Mac-OSX下phpMyAdmin安装配置/">Mac OSX下phpMyAdmin安装配置</a>
+    <h1 class="article-title" itemprop="name">
+      python flask连接mysql数据库
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/10/02/python-flask连接mysql数据库/" class="archive-article-date">
+  	<time datetime="2017-10-02T04:25:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>flask连接mysql数据库踩了非常多的坑，后悔没有用php写后端，抛弃了熟悉的phpMyAdmin，命令行操作不熟的我选择了MySQL workbench。</p>
+<h3 id="MySQL-Workbench"><a href="#MySQL-Workbench" class="headerlink" title="MySQL Workbench"></a>MySQL Workbench</h3><p><img src="https://cl.ly/0I3e1M0M2v0q/download/Image%202017-10-03%20at%2010.33.06.png" alt=""></p>
+<a id="more"></a>
+<p>图形界面方便很多，但在刚开始建表的时候出现了这样的错误：</p>
+<blockquote>
+<p>Error 1005 “Can’t create table (errno: 13)”</p>
+</blockquote>
+<p>害我检查了好几遍，并没有发现什么可疑的错误，后来才知道是要赋权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R mysql:mysql /usr/local/mysql/data/my_database</div></pre></td></tr></table></figure>
+<p>其中，my_database是数据库的名称。要设计的逻辑比较简单，建表之后，就开始安装python连接mysql的驱动包。</p>
+<h3 id="flask-sqlalchemy"><a href="#flask-sqlalchemy" class="headerlink" title="flask_sqlalchemy"></a>flask_sqlalchemy</h3><p>选取mysql驱动包的过程可谓一波三折，有很多随着python版本升级而退出历史舞台的模块和写法，现在我python版本是2.7，为了以后能兼容3（当然我也不确定），我选用了flask_sqlalchemy。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>这里还是用到超方便的工具pip，命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install mysql-python</div><div class="line">pip install flask-sqlalchemy</div></pre></td></tr></table></figure>
+<p>但显然不可能这么顺遂，我在安装时报了这样的错：</p>
+<blockquote>
+<p>ld: library not found for -lssl<br>clang: error: linker command failed with exit code 1 (use -v to see invocation)<br>error: command ‘cc’ failed with exit status 1</p>
+</blockquote>
+<p>我又从官网下载了源码安装包，进行编译安装，也是一样的错误。第一句好像是说openssl库找不到，我就使用brew来安装openssl。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo chown -R $(whoami) /usr/local</div><div class="line">brew install openssl</div></pre></td></tr></table></figure>
+<p>可是错误还是存在，反正我是怎么也没想到，解决方案是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
+<p>安装成功。</p>
+<h4 id="配置sqlalchemy"><a href="#配置sqlalchemy" class="headerlink" title="配置sqlalchemy"></a>配置sqlalchemy</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">#!flask/bin/python</div><div class="line"># -*- coding: utf-8 -*-</div><div class="line">from flask import Flask</div><div class="line">from flask_sqlalchemy import SQLAlchemy </div><div class="line"></div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line">#配置数据库驱动</div><div class="line">app.config[&apos;SQLALCHEMY_DATABASE_URI&apos;]=&apos;mysql://root:myadminsql@localhost:3306/tjyx&apos; #这里登陆的是root用户，要填上自己的密码，MySQL的默认端口是3306，填上之前创建的数据库名</div><div class="line">app.config[&apos;SQLALCHEMY_COMMIT_ON_TEARDOWN&apos;]=True #设置这一项是每次请求结束后都会自动提交数据库中的变动</div><div class="line">db = SQLAlchemy(app) #实例化</div><div class="line"></div><div class="line">#定义表名</div><div class="line">class Member(db.Model):</div><div class="line">	__tablename__ = &apos;member&apos; #定义表名</div><div class="line">	Id = db.Column(db.Integer,primary_key=True)#定义列对象</div><div class="line">	name = db.Column(db.String(64))</div><div class="line">	nickname = db.Column(db.String(64))</div><div class="line">	rest_time = db.Column(db.Integer)</div><div class="line">	integral = db.Column(db.Integer)</div><div class="line"></div><div class="line">#执行插入操作</div><div class="line">user = Member(name = &apos;Yanke&apos;, nickname = &apos;Tom&apos;, rest_time = 12, integral = 100)</div><div class="line">db.session.add_all([user])  # 准备把对象写入数据库之前，先要将其添加到会话中</div><div class="line">db.session.commit()#提交会话到数据库</div></pre></td></tr></table></figure>
+<p>成功插入数据库。</p>
+<p>这一期先到这里，2小时后就开始我的国庆青岛之旅了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python mysql</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://lolilukia.com/2017/10/02/python-flask连接mysql数据库/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/09/28/部署在vultr上的python-flask微信小程序后台/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">部署在vultr上的python flask微信小程序后台</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2131362"></script>
+<!-- UY END -->
   
 
-    
+
 
 
           </div>
@@ -221,8 +325,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
