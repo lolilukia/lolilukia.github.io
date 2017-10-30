@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://cl.ly/040O1F112437/download/Image%202017-07-03%20at%2012.33.42.public.png">
 <meta property="og:image" content="https://cl.ly/243C1a2K3K3j/download/Image%202017-07-03%20at%2012.36.15.public.png">
 <meta property="og:image" content="https://cl.ly/0G202X3a301q/download/ddj.png">
-<meta property="og:updated_time" content="2017-10-29T14:09:07.000Z">
+<meta property="og:updated_time" content="2017-10-30T04:50:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="科学上网黑喂够">
 <meta name="twitter:description" content="一直在探索如何科学上网，经历了红杏、时空隧道、小狐狸的充年跑之后，决心开辟一条长期有效极速舒心的科学道路。妈妈再也不用担心买裙裙的小钱钱扔进黄浦江了，服务更是比从前优秀了太多。闲话不多说，迅速开始我们的探索之旅。
@@ -198,7 +198,7 @@ var _hmt = _hmt || [];
 <p>输入yes和密码，回车</p>
 <p>如果有需要的话，可以配置免密登陆，首先输入命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen</div></pre></td></tr></table></figure>
-<p>路径选择默认，key fingerprint直接回车，然后对ssh配置文件((/etc/ssh/sshd_config)进行修改，将以下几行取消注释</p>
+<p>路径选择默认，key fingerprint直接回车，然后对ssh配置文件(/etc/ssh/sshd_config)进行修改，将以下几行取消注释</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">RSAAuthentication yes</div><div class="line">PubkeyAuthentication yes</div><div class="line">AuthorizedKeysFile  .ssh/authorized_keys</div></pre></td></tr></table></figure>
 <p>然后将我们个人计算中的密钥拷贝到服务器上</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat ~/.ssh/id_rsa.pub | ssh user@host <span class="string">"cat - &gt;&gt; ~/.ssh/authorized_keys"</span></div></pre></td></tr></table></figure>
@@ -209,6 +209,7 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>wget –no-check-certificate <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh" target="_blank" rel="external">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</a><br>chmod +x shadowsocks.sh<br>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</p>
 </blockquote>
+<p>这是一个一键安装脚本，<a href="https://teddysun.com/342.html" target="_blank" rel="external">使用详情</a></p>
 <p>然后会提示你输入密码和端口，我们可以根据端口来分配用户，输入密码和端口之后，就出现了如下的信息<br><img src="https://cl.ly/041v2i0u1X1n/download/Image%202017-07-03%20at%2012.30.14.public.png" alt=""></p>
 <p>安装客户端shadowsocks<br><img src="https://cl.ly/040O1F112437/download/Image%202017-07-03%20at%2012.33.42.public.png" alt=""></p>
 <p>设置服务器设定<br><img src="https://cl.ly/243C1a2K3K3j/download/Image%202017-07-03%20at%2012.36.15.public.png" alt=""></p>
@@ -407,11 +408,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -423,7 +424,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+                <a href="javascript:void(0)" class="js-tag color2">shadowsocks</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -431,7 +432,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">shadowsocks</a>
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
               </li>
              
               <li class="article-tag-list-item">
