@@ -30,7 +30,12 @@
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200312134tz5.png">
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200312Ekcldv.png">
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313LFV0mo.png">
-<meta property="og:updated_time" content="2020-03-13T05:38:40.703Z">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313FQXV84.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313s1k4Ja.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313XosJF9.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313j7skNW.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313lC1pI1.png">
+<meta property="og:updated_time" content="2020-03-13T14:55:47.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 中等题 1-100 思路概述">
 <meta name="twitter:description" content="No.29 两数相除 本人思路：每次将除数乘以 2，记录乘的次数 k，直到被除数小于除数，则被除数至少是除数的 pow(2, k - 1)倍，记为 n。然后将被除数减去除数的一半（因为目前除数大于被除数），除数恢复到初始值，重新对 k 计数，最终直到被除数始终小于除数为止，累计每轮的 n 值，则为结果。 No.39 组合总和备选数组中没有重复数字，每个数字在一个组合中可以选择任意次数  本人思路：">
@@ -225,6 +230,16 @@ var _hmt = _hmt || [];
 <p><strong>本人思路：</strong>首先通过遍历统计一下链表的长度，然后将首尾相连，组成循环链表。从头部开始向后 length - k % length 个位置即为新的头部，然后再向后 length - 1 个位置，将最后一个元素的 next 设置为 None 即可。</p>
 <h4 id="No-62-不同路径"><a href="#No-62-不同路径" class="headerlink" title="No.62 不同路径"></a>No.62 不同路径</h4><p><img src="https://podcast.webview.tech/lolilukia/20200313LFV0mo.png" alt></p>
 <p><strong>本人思路：</strong>记忆化搜索的经典题目，为 m <em> n 的格点设定一个 m </em> n 的矩阵 init，存放到达该点的路径条数，init[0][0] 为 1 （代表由起点到起点的路径只有一条）。如果是第一行，则只能由左边移动得到，init[i][j] = init[i][j - 1]，同理如果为第一列，只能由上边移动得到，init[i][j] = init[i - 1][j]，除了这两种情况以外，到达该点的路径等于到上边点和左边点的路径总和，init[i][j] = init[i - 1][j] +  init[i][j - 1]，最终返回 init[n - 1][m - 1]。</p>
+<h4 id="No-63-不同路径-II"><a href="#No-63-不同路径-II" class="headerlink" title="No.63 不同路径 II"></a>No.63 不同路径 II</h4><p><img src="https://podcast.webview.tech/lolilukia/20200313FQXV84.png" alt></p>
+<p><strong>本人思路：</strong>基本沿用第 62 题的思路，但是要判断当前点上方和左方的格子是否是障碍物，如果上方的格子是障碍物，则当前点的路径条数等于到达左方格子的路径条数，左方格子同理，如果左方上方都是障碍物，则到达当前点的路径数为 0。另外，需要注意起始点和终点为障碍物的情况，那样路径条数都为 0。</p>
+<h4 id="No-64-最小路径和"><a href="#No-64-最小路径和" class="headerlink" title="No.64 最小路径和"></a>No.64 最小路径和</h4><p><img src="https://podcast.webview.tech/lolilukia/20200313s1k4Ja.png" alt></p>
+<p><strong>本人思路：</strong>用数组 minSum 存储到该点的最小路径和，minSum 的初始值为该点的值，遍历至该点时，minSum 调整为该点值加上上方邻居和左方邻居的最小 minSum 值，若不存在上方邻居，则为该点值加上左方邻居 minSum 值，不存在左方邻居同理。最终返回最后一个点的 minSum 值。</p>
+<h4 id="No-71-简化路径"><a href="#No-71-简化路径" class="headerlink" title="No.71 简化路径"></a>No.71 简化路径</h4><p><img src="https://podcast.webview.tech/lolilukia/20200313XosJF9.png" alt></p>
+<p><strong>本人思路：</strong>本人处理方式比较复杂，首先循环将 ‘//‘ 替换成 ‘/‘，直到路径中不存在 ‘//‘。然后将按 ‘/‘ 分割的内容提取成一个数组，此时新建一个空字符串 res，将满足要求的内容向内填充。遍历该数组，假设是除了 ‘.’ 和 ‘..’ 的字符，添加到 res 后面，注意使用一个数组 index 保存普通字符的索引，假设是 ‘.’，不处理；假设是 ‘..’，截取字符串，将 index 最后一个索引代表的字符从 res 中删去，并且将这个索引从 index 中删去。注意，如果最终 res 仍是空字符串，则应该返回 ‘/’。</p>
+<h4 id="No-73-矩阵置零"><a href="#No-73-矩阵置零" class="headerlink" title="No.73 矩阵置零"></a>No.73 矩阵置零</h4><p><img src="https://podcast.webview.tech/lolilukia/20200313j7skNW.png" alt></p>
+<p><strong>本人思路：</strong>好像用了个比较愚蠢的做法，首先，遍历矩阵，将值为 0 的元素所在行和列的索引分别记录，然后再按行按列依次置零。</p>
+<h4 id="No-74-搜索二维矩阵"><a href="#No-74-搜索二维矩阵" class="headerlink" title="No.74 搜索二维矩阵"></a>No.74 搜索二维矩阵</h4><p><img src="https://podcast.webview.tech/lolilukia/20200313lC1pI1.png" alt></p>
+<p><strong>本人思路：</strong>先通过与每行最后一个元素比较确定元素所在行，然后在此行进行二分搜索。</p>
 
       
 
@@ -423,11 +438,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
             
             <div class="clearfix"></div>
