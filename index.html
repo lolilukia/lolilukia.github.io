@@ -177,34 +177,9 @@ var _hmt = _hmt || [];
 <h4 id="No-39-组合总和"><a href="#No-39-组合总和" class="headerlink" title="No.39 组合总和"></a>No.39 组合总和</h4><p>备选数组中没有重复数字，每个数字在一个组合中可以选择任意次数</p>
 <p><img src="https://podcast.webview.tech/lolilukia/20200310vzqoG6.png" alt></p>
 <p><strong>本人思路：</strong>使用递归算法，出口条件是 target &lt;= 0，当 target = 0 时，将结果加入结果集。为了避免重复的结果，先将备选数组排序，然后每次只选不比目前结果最后一个元素小的元素。调用递归方法后，从结果中删去最后一个元素，以便重新选择其他数字进行下一步递归。</p>
-<h4 id="No-40-组合总和-II"><a href="#No-40-组合总和-II" class="headerlink" title="No.40 组合总和 II"></a>No.40 组合总和 II</h4><p>备选数组中可能包含重复数字，每个数字在每个组合中只能选择一次</p>
-<p><img src="https://podcast.webview.tech/lolilukia/20200310vzqoG6.png" alt></p>
-<p><strong>本人思路：</strong>与 39 题类似，只不过需要避免同一个数字的重复选取和具有相同值的数字造成的重复组合，因此需要定义一个 visit 数组。选择前先判断是否已经访问过，仅选择未被访问过的数字，选择时 visit[i] 设置为 True，最后有可能会由于值相同的不同数字而出现重复的组合，在加入结果集中需要判断一下是否已包含此组合。</p>
-<h4 id="No-46-全排列"><a href="#No-46-全排列" class="headerlink" title="No.46 全排列"></a>No.46 全排列</h4><p>给定数组中不包含重复数字</p>
-<p><img src="https://podcast.webview.tech/lolilukia/20200310J3XMtn.png" alt></p>
-<p><strong>本人思路：</strong>与组合不同，出口条件是结果的个数与给定数组的元素个数相同，因此要将选取次数作为参数传递进递归方法中。由于排列不能重复选取，因此需要定义 visit 数组。</p>
-<h4 id="No-47-全排列-II"><a href="#No-47-全排列-II" class="headerlink" title="No.47 全排列 II"></a>No.47 全排列 II</h4><p>给定数组中包含重复数字</p>
-<p><img src="https://podcast.webview.tech/lolilukia/20200310qnjPSY.png" alt></p>
-<p><strong>本人思路：</strong>与不包含相同数字的全排列相比，包含重复数字时，需要在加入结果集之前，判断结果集中是否包含该结果。</p>
-<h4 id="No-48-旋转图像"><a href="#No-48-旋转图像" class="headerlink" title="No.48 旋转图像"></a>No.48 旋转图像</h4><p>给定数组中包含重复数字</p>
-<p><img src="https://podcast.webview.tech/lolilukia/2020031091FFEC.png" alt></p>
-<p><strong>本人思路：</strong>将矩阵转置，即互换行列索引相反的元素，注意只交换一次，然后按行逆置即可。</p>
-<h4 id="No-49-字母异位词分组"><a href="#No-49-字母异位词分组" class="headerlink" title="No.49 字母异位词分组"></a>No.49 字母异位词分组</h4><p><img src="https://podcast.webview.tech/lolilukia/20200310Elpmcd.png" alt></p>
-<p><strong>本人思路：</strong>我的思路比较奇葩…首先将每个字符串排序，然后按排好序的字符串分出若干类，选取相同的字符串为一类，虽然通过，但时间复杂度挺高的。</p>
-<h4 id="No-54-螺旋矩阵"><a href="#No-54-螺旋矩阵" class="headerlink" title="No.54 螺旋矩阵"></a>No.54 螺旋矩阵</h4><p><img src="https://podcast.webview.tech/lolilukia/20200311DpNYCe.png" alt></p>
-<p><strong>本人思路：</strong>顺时针螺旋的顺序就是按右下左上，那么就设置 4 个边界的变量 row_i, row_j, column_i 和 column_j，不断按右下左上的顺序进行输出，相应地，每次操作后分别对以上四个变量进行修改，直到 row_i &gt; row_j 或者 column_i &gt; column_j 终止循环。</p>
-<h4 id="No-55-跳跃游戏"><a href="#No-55-跳跃游戏" class="headerlink" title="No.55 跳跃游戏"></a>No.55 跳跃游戏</h4><p>数组中的每个元素代表你在该位置可以跳跃的最大长度，判断能否到达最后一个位置。</p>
-<p><img src="https://podcast.webview.tech/lolilukia/20200312oX8Gzf.png" alt></p>
-<p><strong>本人思路：</strong>该题转化为求解最远能达到的位置，如果达到的最远位置大于等于最后一个位置的索引，那么肯定可以达到最后一个位置。但如果遍历时，发现之前点的最远到达位置小于当前点的索引，说明通过之前点无法到达当前点，可以直接返回否。最后判断最远位置是否大于等于最后一个位置的索引。</p>
-<h4 id="No-56-合并区间"><a href="#No-56-合并区间" class="headerlink" title="No.56 合并区间"></a>No.56 合并区间</h4><p><img src="https://podcast.webview.tech/lolilukia/20200312iWm7BC.png" alt></p>
-<p><strong>本人思路：</strong>先对数组进行排序，排序的依据是按第一个元素的大小，对每一个当前区间 current，判断后续区间是否有交叉部分，如果后续区间的开始位置小于等于 current 的终止位置，则他们可以进行合并，合并生成的区间为 [current[0], max(current[1], other[1])]，将这个元素 insert 到数组中，然后从数组中删去这两个元素，如果产生合并，current 为合并后的元素，否则为数组中的下一个元素。由于是原地操作，直接返回数组即可。</p>
-<h4 id="No-59-螺旋矩阵-II"><a href="#No-59-螺旋矩阵-II" class="headerlink" title="No.59 螺旋矩阵 II"></a>No.59 螺旋矩阵 II</h4><p><img src="https://podcast.webview.tech/lolilukia/20200312KAD9ep.png" alt></p>
-<p><strong>本人思路：</strong>与 I 类似，设置四个边界变量，然后按右下左上的顺序向初始二维矩阵中填数，直到数字等于 n 平方为止。</p>
-<h4 id="No-60-第-k-个排列"><a href="#No-60-第-k-个排列" class="headerlink" title="No.60 第 k 个排列"></a>No.60 第 k 个排列</h4><p><img src="https://podcast.webview.tech/lolilukia/20200312134tz5.png" alt></p>
-<p><strong>本人思路：</strong>看到这个题目，就知道应该不能把排列都算出来再输出，而是通过索引来从数组中选数。我们观察到，第一个数字固定后，有 (n - 1)! 种排列，那么我们用索引 k 除以 (n - 1)! 就能得知第一个应该选哪个数字，第二个固定，则有 (n - 2)! 种排列，以此类推。而选过的数字不能再选，因此每选完一个数字，就从数组中删去，最终拼接起来就为第 k 个排列。</p>
-<h4 id="No-61-旋转链表"><a href="#No-61-旋转链表" class="headerlink" title="No.61 旋转链表"></a>No.61 旋转链表</h4><p><img src="https://podcast.webview.tech/lolilukia/20200312Ekcldv.png" alt></p>
-<p><strong>本人思路：</strong>首先通过遍历统计一下链表的长度，然后将首尾相连，组成循环链表。从头部开始向后 length - k % length 个位置即为新的头部，然后再向后 length - 1 个位置，将最后一个元素的 next 设置为 None 即可。</p>
-
+        
+          <a class="article-more-a" href="/2020/03/09/LeetCode-中等题-1-100-思路概述/#more">more >></a>
+        
       
 
       
@@ -338,26 +313,9 @@ var _hmt = _hmt || [];
 <p><strong>本人思路：</strong>计算 A 链表和 B 链表的长度之差 x，在相对长的链表中向后移动 x 个元素，得到两个长度相等的链表，然后同时遍历 A 链表和 B 链表，找到相同的节点即为相交节点。</p>
 <h4 id="No-167-两数之和-II-输入有序数组"><a href="#No-167-两数之和-II-输入有序数组" class="headerlink" title="No.167 两数之和 II - 输入有序数组"></a>No.167 两数之和 II - 输入有序数组</h4><p><img src="https://podcast.webview.tech/lolilukia/202002235Ab8vD.png" alt></p>
 <p><strong>本人思路：</strong>每次循环固定一个元素，target - current 计算出另一个目标元素值，然后向后遍历，在满足小于等于目标元素值的范围内搜索。并在每一轮搜索中记录上一个元素值，遇到相同值的元素直接 continue 跳过。</p>
-<h4 id="No-168-Excel表列名称"><a href="#No-168-Excel表列名称" class="headerlink" title="No.168 Excel表列名称"></a>No.168 Excel表列名称</h4><p><img src="https://podcast.webview.tech/lolilukia/20200224IWUIC5.png" alt></p>
-<p><strong>本人思路：</strong>根据规律可知，字符串的组成是由 n 除以 26 的商 + n 除以 26 的余数得到，其中若 n 除以 26 的商大于 26，设商为 x，则该项的字符串由 x 除以 26 的商 + x 除以 26 的余数组成，以此类推，直到商小于等于 26 为止。值得注意的是，此题余数为 0 时，要拆分成 商 - 1 和 26 （余数）的形式。</p>
-<p><strong>注：</strong>ord 可获取字符的 ascii 码，chr 可将 ascii 码转化成字符。</p>
-<h4 id="No-169-多数元素"><a href="#No-169-多数元素" class="headerlink" title="No.169 多数元素"></a>No.169 多数元素</h4><p><img src="https://podcast.webview.tech/lolilukia/20200224146LK4.png" alt></p>
-<p><strong>本人思路：</strong>先对数组排序，对每个元素出现的次数计数，当次数大于数组长度的一半时，返回该元素。</p>
-<h4 id="No-171-Excel表列序号"><a href="#No-171-Excel表列序号" class="headerlink" title="No.171 Excel表列序号"></a>No.171 Excel表列序号</h4><p><img src="https://podcast.webview.tech/lolilukia/20200224Z7yWFS.png" alt></p>
-<p><strong>本人思路：</strong></p>
-<p>“CTH” = ((3 <em> 26) + 20) </em> 26 + 8</p>
-<p>遍历字符串 s，设中间及最终结果为 sum，当前索引为 i，字符代表的数字为ascii 码减去 64。如果是第一个字符，分两种情况，第一种，也是最后一个字符，sum 记录为 s[i] 代表的值，第二种情况 sum 记录为 26 乘以 s[i] 代表的值。如果不是第一个字符，也分为两种情况，如果是最后一个字符，sum 加上 s[i] 代表的值，不是最后一个字符，sum 记录为 26 乘以 sum 加上 s[i] 代表的值。</p>
-<h4 id="No-172-阶乘后的零"><a href="#No-172-阶乘后的零" class="headerlink" title="No.172 阶乘后的零"></a>No.172 阶乘后的零</h4><p><img src="https://podcast.webview.tech/lolilukia/20200224h374aL.png" alt></p>
-<p><strong>本人思路：</strong>尾数有多少个零，取决于阶乘由多少个 5 组成，因此需要找到 5 <strong> i &lt; n 的最大 i，然后将 1 到 i 的 n / (5 </strong> i) 累加，即能得到一共有多少个 5。</p>
-<h4 id="No-189-旋转数组"><a href="#No-189-旋转数组" class="headerlink" title="No.189 旋转数组"></a>No.189 旋转数组</h4><p><img src="https://podcast.webview.tech/lolilukia/20200224vCYm86.png" alt></p>
-<p><strong>本人思路：</strong>每一次旋转，向列表的头部插入列表的最后一个元素，并将最后一个元素删除。</p>
-<h4 id="No-190-颠倒二进制位"><a href="#No-190-颠倒二进制位" class="headerlink" title="No.190 颠倒二进制位"></a>No.190 颠倒二进制位</h4><p><img src="https://podcast.webview.tech/lolilukia/202003096qXWmm.png" alt></p>
-<p><strong>本人思路：</strong>使用 ‘{:032b}’.format(n) 将整数转换成 32 位前补 0 的字符串，然后使用 [::-1] 进行逆置，最终使用 int(x, 2) 转换为二进制数。</p>
-<h4 id="No-191-位-1-的个数"><a href="#No-191-位-1-的个数" class="headerlink" title="No.191 位 1 的个数"></a>No.191 位 1 的个数</h4><p><img src="https://podcast.webview.tech/lolilukia/20200309c1MuRW.png" alt></p>
-<p><strong>本人思路：</strong>使用 ‘{:032b}’.format(n) 将整数转换成 32 位前补 0 的字符串，统计字符串中 ‘1’ 的个数。</p>
-<h4 id="No-198-打家劫舍"><a href="#No-198-打家劫舍" class="headerlink" title="No.198 打家劫舍"></a>No.198 打家劫舍</h4><p><img src="https://podcast.webview.tech/lolilukia/20200309ez9Qjq.png" alt></p>
-<p><strong>本人思路：</strong>动态规划的基本题目，当前房屋的最高金额的公式可以写为 res(n) = max(res(n - 2) + num[n], res(n - 1))，n 从 2 开始，res(0) = 0, res(1) = num[1]</p>
-
+        
+          <a class="article-more-a" href="/2020/02/19/LeetCode-简单题-101-200-思路概述/#more">more >></a>
+        
       
 
       
@@ -938,11 +896,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>

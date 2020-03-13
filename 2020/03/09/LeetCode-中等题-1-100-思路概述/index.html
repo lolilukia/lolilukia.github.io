@@ -29,7 +29,8 @@
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200312KAD9ep.png">
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200312134tz5.png">
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200312Ekcldv.png">
-<meta property="og:updated_time" content="2020-03-12T08:59:57.349Z">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313LFV0mo.png">
+<meta property="og:updated_time" content="2020-03-13T05:38:40.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 中等题 1-100 思路概述">
 <meta name="twitter:description" content="No.29 两数相除 本人思路：每次将除数乘以 2，记录乘的次数 k，直到被除数小于除数，则被除数至少是除数的 pow(2, k - 1)倍，记为 n。然后将被除数减去除数的一半（因为目前除数大于被除数），除数恢复到初始值，重新对 k 计数，最终直到被除数始终小于除数为止，累计每轮的 n 值，则为结果。 No.39 组合总和备选数组中没有重复数字，每个数字在一个组合中可以选择任意次数  本人思路：">
@@ -194,6 +195,7 @@ var _hmt = _hmt || [];
 <h4 id="No-39-组合总和"><a href="#No-39-组合总和" class="headerlink" title="No.39 组合总和"></a>No.39 组合总和</h4><p>备选数组中没有重复数字，每个数字在一个组合中可以选择任意次数</p>
 <p><img src="https://podcast.webview.tech/lolilukia/20200310vzqoG6.png" alt></p>
 <p><strong>本人思路：</strong>使用递归算法，出口条件是 target &lt;= 0，当 target = 0 时，将结果加入结果集。为了避免重复的结果，先将备选数组排序，然后每次只选不比目前结果最后一个元素小的元素。调用递归方法后，从结果中删去最后一个元素，以便重新选择其他数字进行下一步递归。</p>
+<a id="more"></a>
 <h4 id="No-40-组合总和-II"><a href="#No-40-组合总和-II" class="headerlink" title="No.40 组合总和 II"></a>No.40 组合总和 II</h4><p>备选数组中可能包含重复数字，每个数字在每个组合中只能选择一次</p>
 <p><img src="https://podcast.webview.tech/lolilukia/20200310vzqoG6.png" alt></p>
 <p><strong>本人思路：</strong>与 39 题类似，只不过需要避免同一个数字的重复选取和具有相同值的数字造成的重复组合，因此需要定义一个 visit 数组。选择前先判断是否已经访问过，仅选择未被访问过的数字，选择时 visit[i] 设置为 True，最后有可能会由于值相同的不同数字而出现重复的组合，在加入结果集中需要判断一下是否已包含此组合。</p>
@@ -221,6 +223,8 @@ var _hmt = _hmt || [];
 <p><strong>本人思路：</strong>看到这个题目，就知道应该不能把排列都算出来再输出，而是通过索引来从数组中选数。我们观察到，第一个数字固定后，有 (n - 1)! 种排列，那么我们用索引 k 除以 (n - 1)! 就能得知第一个应该选哪个数字，第二个固定，则有 (n - 2)! 种排列，以此类推。而选过的数字不能再选，因此每选完一个数字，就从数组中删去，最终拼接起来就为第 k 个排列。</p>
 <h4 id="No-61-旋转链表"><a href="#No-61-旋转链表" class="headerlink" title="No.61 旋转链表"></a>No.61 旋转链表</h4><p><img src="https://podcast.webview.tech/lolilukia/20200312Ekcldv.png" alt></p>
 <p><strong>本人思路：</strong>首先通过遍历统计一下链表的长度，然后将首尾相连，组成循环链表。从头部开始向后 length - k % length 个位置即为新的头部，然后再向后 length - 1 个位置，将最后一个元素的 next 设置为 None 即可。</p>
+<h4 id="No-62-不同路径"><a href="#No-62-不同路径" class="headerlink" title="No.62 不同路径"></a>No.62 不同路径</h4><p><img src="https://podcast.webview.tech/lolilukia/20200313LFV0mo.png" alt></p>
+<p><strong>本人思路：</strong>记忆化搜索的经典题目，为 m <em> n 的格点设定一个 m </em> n 的矩阵 init，存放到达该点的路径条数，init[0][0] 为 1 （代表由起点到起点的路径只有一条）。如果是第一行，则只能由左边移动得到，init[i][j] = init[i][j - 1]，同理如果为第一列，只能由上边移动得到，init[i][j] = init[i - 1][j]，除了这两种情况以外，到达该点的路径等于到上边点和左边点的路径总和，init[i][j] = init[i - 1][j] +  init[i][j - 1]，最终返回 init[n - 1][m - 1]。</p>
 
       
 
@@ -419,11 +423,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
