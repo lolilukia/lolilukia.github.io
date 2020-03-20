@@ -35,7 +35,14 @@
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313XosJF9.png">
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313j7skNW.png">
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200313lC1pI1.png">
-<meta property="og:updated_time" content="2020-03-13T14:55:47.899Z">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200316QnCOzL.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200316KCUHG3.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200316nYQmzi.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/2020031973ON35.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200320VZj4Tx.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200320UzpuNA.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200320CjWI9W.png">
+<meta property="og:updated_time" content="2020-03-20T07:06:13.545Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 中等题 1-100 思路概述">
 <meta name="twitter:description" content="No.29 两数相除 本人思路：每次将除数乘以 2，记录乘的次数 k，直到被除数小于除数，则被除数至少是除数的 pow(2, k - 1)倍，记为 n。然后将被除数减去除数的一半（因为目前除数大于被除数），除数恢复到初始值，重新对 k 计数，最终直到被除数始终小于除数为止，累计每轮的 n 值，则为结果。 No.39 组合总和备选数组中没有重复数字，每个数字在一个组合中可以选择任意次数  本人思路：">
@@ -240,6 +247,20 @@ var _hmt = _hmt || [];
 <p><strong>本人思路：</strong>好像用了个比较愚蠢的做法，首先，遍历矩阵，将值为 0 的元素所在行和列的索引分别记录，然后再按行按列依次置零。</p>
 <h4 id="No-74-搜索二维矩阵"><a href="#No-74-搜索二维矩阵" class="headerlink" title="No.74 搜索二维矩阵"></a>No.74 搜索二维矩阵</h4><p><img src="https://podcast.webview.tech/lolilukia/20200313lC1pI1.png" alt></p>
 <p><strong>本人思路：</strong>先通过与每行最后一个元素比较确定元素所在行，然后在此行进行二分搜索。</p>
+<h4 id="No-75-颜色分类"><a href="#No-75-颜色分类" class="headerlink" title="No.75 颜色分类"></a>No.75 颜色分类</h4><p><img src="https://podcast.webview.tech/lolilukia/20200316QnCOzL.png" alt></p>
+<p><strong>本人思路：</strong>遇到 0 就从数组中删去插入到最前面，遇到 2 就从数组中删去追加到最后面。</p>
+<h4 id="No-77-组合"><a href="#No-77-组合" class="headerlink" title="No.77 组合"></a>No.77 组合</h4><p><img src="https://podcast.webview.tech/lolilukia/20200316KCUHG3.png" alt></p>
+<p><strong>本人思路：</strong>递归解法，出口条件为剩余选择的数字个数为 0，为避免重复元素，设定每次选择的元素都要比上一个选择的元素大。</p>
+<h4 id="No-78-子集"><a href="#No-78-子集" class="headerlink" title="No.78 子集"></a>No.78 子集</h4><p><img src="https://podcast.webview.tech/lolilukia/20200316nYQmzi.png" alt></p>
+<p><strong>本人思路：</strong>在 77 题的基础上，选择数字的个数从 0 到 len(nums)，循环调用递归方法。</p>
+<h4 id="No-79-单词搜索"><a href="#No-79-单词搜索" class="headerlink" title="No.79 单词搜索"></a>No.79 单词搜索</h4><p><img src="https://podcast.webview.tech/lolilukia/2020031973ON35.png" alt></p>
+<p><strong>本人思路：</strong>这道题是典型的深度优先搜索，本来打算用栈来实现的，但逻辑上有些麻烦，难点在于当搜索出现分支的时候，一条分支搜索完毕之后需要将其的访问状态设置为初始状态，最终决定用递归实现。递归的出口条件为下一个搜索位置不等于下一个字符，或已经是最后一个字符。注意在递归前将当前点设置为0，递归结束后再恢复，避免重复搜索。</p>
+<h4 id="No-80-删除排序数组中的重复项-II"><a href="#No-80-删除排序数组中的重复项-II" class="headerlink" title="No.80 删除排序数组中的重复项 II"></a>No.80 删除排序数组中的重复项 II</h4><p><img src="https://podcast.webview.tech/lolilukia/20200320VZj4Tx.png" alt></p>
+<p><strong>本人思路：</strong>记录当前点的值，并向后计数，如超过 2 则开始执行删除，如遍历到值发生变化，则改变参考值的值，重新计数。</p>
+<h4 id="No-81-搜索旋转排序数组-II"><a href="#No-81-搜索旋转排序数组-II" class="headerlink" title="No.81 搜索旋转排序数组 II"></a>No.81 搜索旋转排序数组 II</h4><p><img src="https://podcast.webview.tech/lolilukia/20200320UzpuNA.png" alt></p>
+<p><strong>本人思路：</strong>最初的想法是找到旋转点，然后判断 target 在以旋转点分割的数组的哪一个部分，在该部分进行二分查找，但似乎没有直接进行遍历 O(n) 的算法快。</p>
+<h4 id="No-82-删除排序链表中的重复元素-II"><a href="#No-82-删除排序链表中的重复元素-II" class="headerlink" title="No.82 删除排序链表中的重复元素 II"></a>No.82 删除排序链表中的重复元素 II</h4><p><img src="https://podcast.webview.tech/lolilukia/20200320CjWI9W.png" alt></p>
+<p><strong>本人思路：</strong>记录当前点的前一个节点 pre，如果当前节点是重复节点，找到与该节点值不相同的下一个节点 next，将 pre.next = next。如果当前点为头节点，则将 head 指向 next。另外，需要判断当前点是否为重复节点且值与最后一个节点相同，如果是，则 pre.next = None，如果当前点既是头节点，又是重复节点，又与最后一个节点值相同，则直接返回 None。</p>
 
       
 
@@ -434,11 +455,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
