@@ -42,7 +42,9 @@
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200320VZj4Tx.png">
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200320UzpuNA.png">
 <meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200320CjWI9W.png">
-<meta property="og:updated_time" content="2020-03-20T07:06:13.545Z">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/20200320v8K0HB.png">
+<meta property="og:image" content="https://podcast.webview.tech/lolilukia/202003212jvFyO.png">
+<meta property="og:updated_time" content="2020-03-21T07:44:35.553Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 中等题 1-100 思路概述">
 <meta name="twitter:description" content="No.29 两数相除 本人思路：每次将除数乘以 2，记录乘的次数 k，直到被除数小于除数，则被除数至少是除数的 pow(2, k - 1)倍，记为 n。然后将被除数减去除数的一半（因为目前除数大于被除数），除数恢复到初始值，重新对 k 计数，最终直到被除数始终小于除数为止，累计每轮的 n 值，则为结果。 No.39 组合总和备选数组中没有重复数字，每个数字在一个组合中可以选择任意次数  本人思路：">
@@ -261,6 +263,10 @@ var _hmt = _hmt || [];
 <p><strong>本人思路：</strong>最初的想法是找到旋转点，然后判断 target 在以旋转点分割的数组的哪一个部分，在该部分进行二分查找，但似乎没有直接进行遍历 O(n) 的算法快。</p>
 <h4 id="No-82-删除排序链表中的重复元素-II"><a href="#No-82-删除排序链表中的重复元素-II" class="headerlink" title="No.82 删除排序链表中的重复元素 II"></a>No.82 删除排序链表中的重复元素 II</h4><p><img src="https://podcast.webview.tech/lolilukia/20200320CjWI9W.png" alt></p>
 <p><strong>本人思路：</strong>记录当前点的前一个节点 pre，如果当前节点是重复节点，找到与该节点值不相同的下一个节点 next，将 pre.next = next。如果当前点为头节点，则将 head 指向 next。另外，需要判断当前点是否为重复节点且值与最后一个节点相同，如果是，则 pre.next = None，如果当前点既是头节点，又是重复节点，又与最后一个节点值相同，则直接返回 None。</p>
+<h4 id="No-86-分隔链表"><a href="#No-86-分隔链表" class="headerlink" title="No.86 分隔链表"></a>No.86 分隔链表</h4><p><img src="https://podcast.webview.tech/lolilukia/20200320v8K0HB.png" alt></p>
+<p><strong>本人思路：</strong>新建两个链表 a 和 b，遍历链表时，小于 x 的节点放在 a 中，大于等于 x 的节点放在 b 中，然后连接 a 和 b。</p>
+<h4 id="No-89-格雷编码"><a href="#No-89-格雷编码" class="headerlink" title="No.89 格雷编码"></a>No.89 格雷编码</h4><p><img src="https://podcast.webview.tech/lolilukia/202003212jvFyO.png" alt></p>
+<p><strong>本人思路：</strong>依靠找规律就可以解决，通过观察可以得到，个位的变化规律是0, 1, 1, 0, 0, 1, 1, 0…，十位每两个的变化规律是0, 1, 1, 0，千位是每 4 个…由此可以通过按位拼接字符串得到。</p>
 
       
 
@@ -455,15 +461,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
